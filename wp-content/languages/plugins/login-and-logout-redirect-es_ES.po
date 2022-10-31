@@ -1,0 +1,60 @@
+# Translation of Plugins - Login and Logout Redirect - Development (trunk) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Login and Logout Redirect - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-17 07:32:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Login and Logout Redirect - Development (trunk)\n"
+
+#. Description of the plugin
+msgid "A WordPress plugin which enables you to redirect users on login and logout or both, in a simplest way."
+msgstr "Un plugin para WordPress que te permite redirigir a los usuarios al acceder y al salir o ambos, de la forma más sencilla."
+
+#. Author of the plugin
+msgid "Swapnil V. Patil"
+msgstr "Swapnil V. Patil"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/patilswapnilv/login-and-logout-redirect/"
+msgstr "https://github.com/patilswapnilv/login-and-logout-redirect/"
+
+#. Author URI of the plugin
+msgid "https://swapnilpatil.in"
+msgstr "https://swapnilpatil.in"
+
+#. Plugin Name of the plugin
+msgid "Login and Logout Redirect"
+msgstr "Login and Logout Redirect"
+
+#: includes/class-login-redirect.php:83
+msgid "The URL users will be redirected to after login."
+msgstr "La URL a la que los usuarios serán redirigidos después de acceder."
+
+#: includes/class-login-redirect.php:76 includes/class-login-redirect.php:107
+msgid "Login Redirect"
+msgstr "Redirección al acceder"
+
+#: includes/class-logout-redirect.php:167
+#: includes/class-logout-redirect.php:208
+msgid "You can use these macros for your redirection: %s"
+msgstr "Puedes usar estas macros para tu redirección: %s"
+
+#: includes/class-logout-redirect.php:164
+msgid "The URL users will be redirected to after logout."
+msgstr "La URL a la que los usuarios serán redirigidos después de salir."
+
+#: includes/class-login-redirect.php:79 includes/class-login-redirect.php:109
+#: includes/class-logout-redirect.php:160
+#: includes/class-logout-redirect.php:195
+msgid "Redirect to"
+msgstr "Redirigir a"
+
+#: includes/class-logout-redirect.php:157
+#: includes/class-logout-redirect.php:193
+msgid "Logout Redirect"
+msgstr "Redirección al salir"
