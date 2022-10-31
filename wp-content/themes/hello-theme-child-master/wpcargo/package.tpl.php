@@ -25,10 +25,14 @@
 						?>
 						<td class="package-data <?php echo wpcargo_to_slug($field_key); ?>">
 							<?php 
+								if ($field_key != "imagen_paquete"):
 								$package_data = array_key_exists( $field_key, $data_value ) ? $data_value[$field_key] : '' ;
 								echo is_array( $package_data ) ? implode(',', $package_data ) : $package_data; 
+								else:
+									echo "<img src='".wp_get_attachment_image_src($data_value[$field_key])[0]."'>";
+								endif;
 							?>
-
+							
 						</td>
 					<?php endforeach; ?>
 				</tr>

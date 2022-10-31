@@ -6,8 +6,7 @@
                 <img src="<?php echo esc_url( $brand_logo ); ?>" width="160" style="margin:0 auto;"/>
             </div>
             <div class="wpc-email-notification-content" style="padding: 2em 0; font-size: 14px;">                  
-                <?php echo wp_kses( $email_body, 'post' ); ?>                
-                <?= template_consolidar(get_the_ID()); ?>
+                <?php echo emailbodyshipit( get_the_ID(),$email_body); ?>                                                
             </div>
         </div>
         <div class="wpc-email-notification-footer" style="width: 460px; font-size: 10px; text-align: center; margin: 0 auto; padding: 2em;">

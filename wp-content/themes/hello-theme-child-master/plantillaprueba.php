@@ -41,3 +41,9 @@ function get_all_meta($type){
           $a =  get_all_meta("wpcargo_shipment");
 
 //print_r($a);
+
+
+$emailbody =" <h1>TEST ONLINE SHORTCODE {shortcodeconsolidado} </h1>";
+echo $emailbody."<br>";
+$emailbody2 = str_replace("{shortcodeconsolidado}","<a href='test'>TESMOD replace shortcode </a>",$emailbody);
+echo $emailbody2;

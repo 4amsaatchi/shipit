@@ -54,3 +54,24 @@
 [10/28/2022 5:55:32 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
 [10/28/2022 8:45:28 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Nueva dirección de correo electrónico de administrador
 [10/28/2022 8:45:42 PM] - Headers: , To: admin@138.197.102.237, Subject: [Shippit] Cambiado el correo electrónico del administrador
+[10/31/2022 5:26:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[10/31/2022 5:34:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - EN TRANSITO NACIONAL
+[10/31/2022 5:35:36 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian51541@hotmail.com, Subject: Asignar notificación de envío [Agent]
+[10/31/2022 5:35:36 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
+[10/31/2022 5:35:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[10/31/2022 5:38:01 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
+[10/31/2022 5:54:13 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - ENVIO CONSOLIDADO Y EN COLA DE SALIDA DE BODEGA MIAMI
+[10/31/2022 8:28:29 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[10/31/2022 8:30:20 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - EN TRANSITO NACIONAL
+[10/31/2022 8:46:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
+[10/31/2022 9:12:00 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[10/31/2022 9:12:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
