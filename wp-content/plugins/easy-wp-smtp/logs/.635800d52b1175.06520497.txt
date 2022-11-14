@@ -75,3 +75,31 @@
 , To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
 [10/31/2022 9:12:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
 , To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
+[11/03/2022 8:11:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian51541@hotmail.com, Subject: Asignar notificación de envío [Agent]
+[11/03/2022 8:11:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
+[11/03/2022 8:11:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[11/03/2022 8:11:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SU ENVIO ESTA SIENDO CONSOLIDADO
+[11/07/2022 5:53:59 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[11/08/2022 5:11:34 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[11/08/2022 5:16:01 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - EN BODEGA SPS
+[11/08/2022 5:16:08 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - ENVIO EN TRANSITO INTERNACIONAL
+[11/08/2022 8:14:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
+[11/08/2022 8:50:20 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[11/14/2022 4:13:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - EN BODEGA SPS
+[11/14/2022 4:41:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - ENVIO ENTREGADO
+[11/14/2022 4:49:33 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Registro de nuevo usuario
+[11/14/2022 4:49:34 PM] - Headers: , To: julian.escobar@ipalmera.co, Subject: [Shippit] Datos de acceso
+[11/14/2022 4:49:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian.escobar@ipalmera.co, Subject: Asignar notificación de envío [Client]
+[11/14/2022 5:47:59 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[11/14/2022 8:35:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn1668457657box - EN TRANSITO NACIONAL
+[11/14/2022 8:46:02 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # hn1668458167box - ENVIO ENTREGADO

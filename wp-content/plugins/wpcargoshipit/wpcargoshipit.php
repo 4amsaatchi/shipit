@@ -22,6 +22,21 @@ function consolidar_pedido(){
 add_shortcode('wpshipit_consolidar', 'consolidar_pedido');
 
 
+
+function form_preentregas(){
+		if ( is_user_logged_in() ) {
+		ob_start();		
+		include('views/templateformpreentregas.php');    
+		$template = ob_get_contents();
+	    ob_get_clean(); 
+	    return $template;   
+		}	
+}
+
+
+add_shortcode('wpshipit_preentregas', 'form_preentregas');
+
+
 add_filter( 'wpcargo_package_fields', 'wpcargo_package_add_fields_callback' );
 function wpcargo_package_add_fields_callback( $package_fields){
   //Add fields
@@ -44,6 +59,18 @@ function wpcargo_package_add_fields_callback( $package_fields){
     'required' => false,
     'options' => array()
   );  
+   $package_fields['factura'] = array(
+    'label' => __('Factura', 'wpcargo'),
+    'field' => 'text',
+    'required' => false,
+    'options' => array()
+  );
+    $package_fields['fechaestimada'] = array(
+    'label' => __('Fecha estimada', 'wpcargo'),
+    'field' => 'text',
+    'required' => false,
+    'options' => array()
+  );
   return $package_fields;
 }
 
@@ -124,3 +151,59 @@ function packages_list($idorder){
 
 	 return $html;
 }
+
+
+
+// Our custom post type function
+function create_posttype() {
+  
+    register_post_type( 'preentregas',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Pre-entregas' ),
+                'singular_name' => __( 'Preentrega' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'rewrite' => array('slug' => 'preentregas'),
+            'show_in_rest' => true,            
+            'supports' => array( 'title', 'editor', 'custom-fields' )
+  
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+
+
+function get_listado_preentregas(){	
+	include('views/templatelistadopreentregas.php');    
+}
+
+
+add_action('admin_menu','menu_preentregas');
+function menu_preentregas() {
+	
+	//this is the main item for the menu
+	add_menu_page('Pre-entregas', //page title
+	'Pre-entregas', //menu title
+	'manage_options', //capabilities
+	'get_listado_preentregas', //menu slug
+	'get_listado_preentregas' //function
+	);
+	
+
+
+}
+
+
+function remove_menu () 
+{
+   remove_menu_page('edit.php?post_type=preentregas');
+} 
+
+add_action('admin_menu', 'remove_menu');
+
+   
