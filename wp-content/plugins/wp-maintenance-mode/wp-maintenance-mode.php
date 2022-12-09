@@ -1,10 +1,10 @@
 <?php
 /**
- * WP Maintenance Mode
+ * LightStart
  *
- * Plugin Name: WP Maintenance Mode & Coming Soon
- * Description: Adds a splash page to your site that lets visitors know your site is down for maintenance. It's perfect for a coming soon page.
- * Version: 2.5.4
+ * Plugin Name: LightStart - Maintenance Mode, Coming Soon and Landing Page Builder
+ * Description: Adds a splash page to your site that lets visitors know your site is down for maintenance. It's perfect for a coming soon or landing page.
+ * Version: 2.6.1
  * Author: Themeisle
  * Author URI: https://themeisle.com/
  * Twitter: themeisle
@@ -23,6 +23,7 @@ defined( 'ABSPATH' ) || exit;
  * DEFINE PATHS
  */
 define( 'WPMM_PATH', plugin_dir_path( __FILE__ ) );
+define( 'WPMM_FILE', __FILE__ );
 define( 'WPMM_CLASSES_PATH', WPMM_PATH . 'includes/classes/' );
 define( 'WPMM_FUNCTIONS_PATH', WPMM_PATH . 'includes/functions/' );
 define( 'WPMM_LANGUAGES_PATH', basename( WPMM_PATH ) . '/languages/' );

@@ -4,7 +4,7 @@ Plugin Name: Branda
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Description: A complete white label and branding solution for multisite. Login images, favicons, remove WordPress links and branding, and much more.
 Author: WPMU DEV
-Version: 3.4.8
+Version: 3.4.8.1
 Author URI: https://wpmudev.com/
 Requires PHP: 5.6
 Text_domain: ub
@@ -74,7 +74,31 @@ if ( file_exists( $dash_notification_path ) ) {
 	include_once $dash_notification_path;
 }
 
+add_action(
+	'admin_init',
+	function() {
+		// Black Friday banner 2022.
+		if ( file_exists( dirname( __FILE__ ) . '/external/black-friday/banner.php' ) ) {
+			include_once dirname( __FILE__ ) . '/external/black-friday/banner.php';
+
+			new \WPMUDEV\BlackFriday\Banner(
+				array(
+					'close'       => __( 'Close', 'ub' ),
+					'get_deal'    => __( 'Get deal', 'ub' ),
+					'intro'       => __( 'Black Friday offer for WP businesses and agencies', 'ub' ),
+					'off'         => __( 'Off', 'ub' ),
+					'title'       => __( 'Everything you need to run your WP business for', 'ub' ),
+					'discount'    => __( '83.5', 'ub' ),
+					'price'       => __( '3000', 'ub' ),
+					'description' => __( 'From the creators of Branda, WPMU DEV’s all-in-one platform gives you all the Pro tools and support you need to run and grow a web development business. Trusted by over 50,000 web developers. Limited deals available.', 'ub' ),
+				),
+				'https://wpmudev.com/black-friday/?coupon=BFP-2022&utm_source=branda&utm_medium=plugin&utm_campaign=BFP-2022-branda&utm_id=BFP-2022&utm_term=BF-2022-plugin-Branda&utm_content=BF-2022',
+				\WPMUDEV\BlackFriday\Banner::BRANDA
+			);
+		}
+	}
+);
+
 register_activation_hook( __FILE__, 'branda_register_activation_hook' );
 register_deactivation_hook( __FILE__, 'branda_register_deactivation_hook' );
 register_uninstall_hook( __FILE__, 'branda_register_uninstall_hook' );
-

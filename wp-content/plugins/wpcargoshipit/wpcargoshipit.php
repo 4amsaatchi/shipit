@@ -206,4 +206,15 @@ function remove_menu ()
 
 add_action('admin_menu', 'remove_menu');
 
-   
+function singleenvio(){
+		if ( is_user_logged_in() ) {
+		ob_start();		
+		include('views/templatesingleenvio.php');    
+		$template = ob_get_contents();
+	    ob_get_clean(); 
+	    return $template;   
+		}	
+}
+
+
+add_shortcode('wpshipit_envio', 'singleenvio');

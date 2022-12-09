@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="ico-avion" transform="translate(-15366 -3100)">
+    <g id="Elipse_79" data-name="Elipse 79" transform="translate(15366 3100)" fill="none" stroke="#f53c5d" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 8">
+      <circle cx="41" cy="41" r="41" stroke="none"/>
+      <circle cx="41" cy="41" r="39.5" fill="none"/>
+    </g>
+    <path id="ico-volar" d="M892.73,849.081l9.754,8.231c3.281,3.026.862,6.829.862,6.829l-4.986,9.479s-.939,1.877.168,3.043a3.061,3.061,0,0,0,3.782-.08L923.491,859.1a2.493,2.493,0,0,0,1.037-2.419c-.2-1.432-2.074-1.877-2.074-1.877l-27.952-9.96s-1.707-.408-2.413.677A2.558,2.558,0,0,0,892.73,849.081Z" transform="translate(14500.45 2280.156)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+  </g>
+</svg>

@@ -6,13 +6,13 @@
  * Author: <a href="http://wptaskforce.com/">WPTaskForce</a>
  * Text Domain: wpcargo-custom-field
  * Domain Path: /languages
- * Version: 5.0.5
+ * Version: 5.0.8
  */
 if ( ! defined( 'ABSPATH' ) ) {
  exit;
 }
 //* Defined constant
-define( 'WPCARGO_CUSTOM_FIELD_VERSION', "5.0.5");
+define( 'WPCARGO_CUSTOM_FIELD_VERSION', "5.0.8");
 define( 'WPCARGO_CUSTOM_FIELD_TEXTDOMAIN', 'wpcargo-custom-field' );
 define( 'WPCARGO_CUSTOM_FIELD_FILE', __FILE__ );
 define( 'WPCARGO_CUSTOM_FIELD_URL', plugin_dir_url( __FILE__ ) );

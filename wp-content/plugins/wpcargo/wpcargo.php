@@ -6,11 +6,11 @@
  * Author: <a href="http://www.wptaskforce.com/">WPTaskForce</a>
  * Text Domain: wpcargo
  * Domain Path: /languages
- * Version: 6.9.9
+ * Version: 6.10.1
  */
 /*
 	WPCargo - Track and Trace Plugin
-	Copyright (C) 2015  WPTaskForce
+	Copyright (C) 2023  WPTaskForce
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
@@ -21,7 +21,7 @@
 	GNU General Public License for more details.
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
-	WPCargo Copyright (C) 2015  WPTaskForce
+	WPCargo Copyright (C) 2023  WPTaskForce
 	This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
 	This is free software, and you are welcome to redistribute it
 	under certain conditions; type `show c' for details.
@@ -32,23 +32,25 @@ if (!defined('ABSPATH')) {
 		
 //* Defined constant
 define( 'WPCARGO_TEXTDOMAIN', 'wpcargo' );
-define( 'WPCARGO_VERSION', '6.9.9' );
+define( 'WPCARGO_VERSION', '6.10.1' );
 define( 'WPCARGO_DB_VERSION', '1.0.0' );
 define( 'WPCARGO_FILE_DIR', __FILE__  );
 define( 'WPCARGO_PLUGIN_URL', plugin_dir_url( WPCARGO_FILE_DIR ) );
 define( 'WPCARGO_PLUGIN_PATH', plugin_dir_path( WPCARGO_FILE_DIR ) );
 //** Include files
-//** Admin
+	//** Admin
 require_once( WPCARGO_PLUGIN_PATH.'admin/wpc-admin.php' );
-require_once( WPCARGO_PLUGIN_PATH.'admin/classes/class-wpcargo.php' );
 require_once( WPCARGO_PLUGIN_PATH.'admin/classes/class-database.php' );
+require_once( WPCARGO_PLUGIN_PATH.'admin/classes/class-wpcargo.php' );
 //** Frontend
 require_once( WPCARGO_PLUGIN_PATH.'/includes/packages.php' );
 require_once( WPCARGO_PLUGIN_PATH.'/classes/class-wpc-scripts.php' );
 require_once( WPCARGO_PLUGIN_PATH.'/classes/class-wpc-shortcode.php' );
 require_once( WPCARGO_PLUGIN_PATH.'/classes/class-wpc-print.php' );
+
+
 //** Load text Domain
-add_action( 'plugins_loaded', array( 'WPC_Admin','wpcargo_load_textdomain' ) );
+add_action( 'plugins_loaded', array( 'WPC_Admin','wpcargo_load_textdomain' ), 30 );
 // Database Set up
 //** Run when plugin installation
 //** Add user role

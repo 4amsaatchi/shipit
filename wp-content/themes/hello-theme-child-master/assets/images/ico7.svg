@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="ico-check" transform="translate(-16038 -3100)">
+    <g id="Elipse_82" data-name="Elipse 82" transform="translate(16038 3100)" fill="none" stroke="#f53c5d" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 8">
+      <circle cx="41" cy="41" r="41" stroke="none"/>
+      <circle cx="41" cy="41" r="39.5" fill="none"/>
+    </g>
+    <g id="ico-recibido" transform="translate(16055.723 3117.722)">
+      <g id="Grupo_3892" data-name="Grupo 3892" transform="translate(0 0)">
+        <path id="Layer-1" d="M23.278,46.556A23.278,23.278,0,1,0,0,23.278,23.278,23.278,0,0,0,23.278,46.556Z" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" fill-rule="evenodd"/>
+        <path id="Layer-2" d="M27.706,41.055l6.949,7.013,12.589-12.63" transform="translate(-14.27 -18.252)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

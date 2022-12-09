@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="ico-compra" transform="translate(-15009 -3100)">
+    <g id="Elipse_76" data-name="Elipse 76" transform="translate(15009 3100)" fill="none" stroke="#f53c5d" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 8">
+      <circle cx="41" cy="41" r="41" stroke="none"/>
+      <circle cx="41" cy="41" r="39.5" fill="none"/>
+    </g>
+    <g id="ico-compra-2" data-name="ico-compra" transform="translate(14682.684 2428.69)">
+      <path id="Trazado_72" data-name="Trazado 72" d="M31.006,34.006H6L8.5,9h20Z" transform="translate(348.813 692.058)" fill="none" stroke="#353b49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Trazado_73" data-name="Trazado 73" d="M12,15.5V8a5.016,5.016,0,0,1,5-5h0a5.016,5.016,0,0,1,5,5v7.5" transform="translate(350.315 690.556)" fill="none" stroke="#353b49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

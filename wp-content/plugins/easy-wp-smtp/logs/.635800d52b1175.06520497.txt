@@ -1,105 +1,117 @@
-[10/25/2022 3:29:25 PM] - Easy WP SMTP debug log file
-
-[10/25/2022 3:33:31 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: agente1@138.197.102.237, Subject: Asignar notificación de envío [Agent]
-[10/25/2022 3:33:32 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
-[10/25/2022 3:36:58 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: agente1@138.197.102.237, Subject: Asignar notificación de envío [Agent]
-[10/25/2022 3:36:59 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
-[10/25/2022 3:37:00 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/25/2022 3:47:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/25/2022 3:48:05 PM] - Headers: , To: admin@138.197.102.237, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[10/25/2022 3:49:47 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - ENVIO CONSOLIDADO Y EN COLA DE SALIDA DE BODEGA MIAMI
-[10/25/2022 3:51:43 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - ENVIO EN TRANSITO INTERNACIONAL
-[10/25/2022 4:18:21 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - EN BODEGA SPS
-[10/25/2022 4:29:31 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/25/2022 4:35:55 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/25/2022 4:38:21 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - ENVIO CONSOLIDADO Y EN COLA DE SALIDA DE BODEGA MIAMI
-[10/25/2022 4:44:08 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/25/2022 4:46:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/25/2022 5:12:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/27/2022 4:35:55 PM] - Headers: , To: admin@138.197.102.237, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[10/27/2022 8:38:47 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/27/2022 8:43:19 PM] - Headers: , To: agente1@138.197.102.237, Subject: [Shippit] Cambiado el correo electrónico
-[10/27/2022 8:52:21 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/27/2022 8:52:39 PM] - Headers: , To: , Subject: Consolidación de pedido
-[10/27/2022 8:52:39 PM] - *** You must provide at least one recipient email address. ***
-[10/27/2022 9:02:14 PM] - Headers: , To: , Subject: Consolidación de pedido
-[10/27/2022 9:02:14 PM] - *** You must provide at least one recipient email address. ***
-[10/27/2022 9:03:49 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:05:12 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:05:20 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:06:57 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Consolidación de pedido
-[10/27/2022 9:09:09 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:10:02 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:11:41 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:13:03 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:18:38 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Consolidación de pedido
-[10/27/2022 9:19:03 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/27/2022 9:20:55 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/28/2022 5:43:05 PM] - Headers: , To: julian51541@hotmail.com, Subject: [Shippit] Contraseña cambiada
-[10/28/2022 5:43:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/28/2022 5:55:32 PM] - Headers: , To: julian51541@hotmail.com, Subject: Consolidación de pedido
-[10/28/2022 8:45:28 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Nueva dirección de correo electrónico de administrador
-[10/28/2022 8:45:42 PM] - Headers: , To: admin@138.197.102.237, Subject: [Shippit] Cambiado el correo electrónico del administrador
-[10/31/2022 5:26:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/31/2022 5:34:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn083435box - EN TRANSITO NACIONAL
-[10/31/2022 5:35:36 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian51541@hotmail.com, Subject: Asignar notificación de envío [Agent]
-[10/31/2022 5:35:36 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
-[10/31/2022 5:35:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/31/2022 5:38:01 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/31/2022 5:54:13 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - ENVIO CONSOLIDADO Y EN COLA DE SALIDA DE BODEGA MIAMI
-[10/31/2022 8:28:29 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[10/31/2022 8:30:20 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - EN TRANSITO NACIONAL
-[10/31/2022 8:46:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: BOXHN Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[10/31/2022 9:12:00 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[10/31/2022 9:12:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[11/03/2022 8:11:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian51541@hotmail.com, Subject: Asignar notificación de envío [Agent]
-[11/03/2022 8:11:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian515419@gmail.com, Subject: Asignar notificación de envío [Client]
-[11/03/2022 8:11:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[11/03/2022 8:11:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SU ENVIO ESTA SIENDO CONSOLIDADO
-[11/07/2022 5:53:59 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[11/08/2022 5:11:34 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[11/08/2022 5:16:01 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - EN BODEGA SPS
-[11/08/2022 5:16:08 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn036370box - ENVIO EN TRANSITO INTERNACIONAL
-[11/08/2022 8:14:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - SUS PAQUETES ESTAN SIENDO CONSOLIDADOS
-[11/08/2022 8:50:20 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[11/14/2022 4:13:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - EN BODEGA SPS
-[11/14/2022 4:41:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn048149box - ENVIO ENTREGADO
-[11/14/2022 4:49:33 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Registro de nuevo usuario
-[11/14/2022 4:49:34 PM] - Headers: , To: julian.escobar@ipalmera.co, Subject: [Shippit] Datos de acceso
-[11/14/2022 4:49:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian.escobar@ipalmera.co, Subject: Asignar notificación de envío [Client]
-[11/14/2022 5:47:59 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
-[11/14/2022 8:35:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn1668457657box - EN TRANSITO NACIONAL
-[11/14/2022 8:46:02 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
-, To: julian515419@gmail.com, Subject: Shipit Tracking # hn1668458167box - ENVIO ENTREGADO
+[12/05/2022 9:36:49 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Registro de nuevo usuario
+[12/05/2022 9:36:50 PM] - Headers: , To: jhon.ramirez@ipalmera.com, Subject: [Shippit] Datos de acceso
+[12/05/2022 10:50:43 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/05/2022 11:07:49 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/05/2022 11:08:58 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 2:48:50 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 2:53:42 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 2:57:08 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[12/06/2022 2:57:42 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 2:58:43 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 2:59:26 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 3:01:30 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 3:31:19 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 3:33:10 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 3:38:36 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/06/2022 5:57:19 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Gracias por tu donación
+[12/06/2022 8:31:00 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[12/06/2022 8:36:53 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[12/06/2022 8:40:08 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[12/06/2022 8:45:33 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[12/07/2022 8:27:50 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Tu sitio tiene problemas técnicos
+[12/07/2022 9:55:00 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Cuenta Creada en Shipit
+[12/07/2022 9:55:00 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 9:57:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Cuenta Creada en Shipit
+[12/07/2022 9:57:07 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 9:58:23 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Cuenta Creada en Shipit
+[12/07/2022 9:58:23 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 9:59:08 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Cuenta Creada en Shipit
+[12/07/2022 9:59:08 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:28:04 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Cuenta Creada en Shipit
+[12/07/2022 10:28:04 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:33:49 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:33:49 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:34:19 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:34:19 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:34:40 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:34:40 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:35:50 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:35:50 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:36:16 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:36:16 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:36:40 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:36:40 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:36:50 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:36:50 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:37:15 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:37:15 PM] - *** You must provide at least one recipient email address. ***
+[12/07/2022 10:38:45 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:39:09 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:39:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:39:45 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:40:09 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:44:30 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio 2193
+[12/07/2022 10:46:17 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670450100box
+[12/07/2022 10:48:35 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670450100box
+[12/07/2022 10:51:02 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jescobar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670450100box
+[12/08/2022 4:14:13 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1668458795box
+[12/08/2022 4:26:38 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670516798box
+[12/08/2022 4:29:47 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670516987box
+[12/08/2022 8:39:39 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio hn1670531979box
+[12/08/2022 10:34:40 PM] - Headers: , To: , Subject: Consolidación de pedido
+[12/08/2022 10:34:40 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:51:48 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 3:51:48 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:51:48 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 3:51:48 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:53:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 3:53:24 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:53:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 3:53:24 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:54:36 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 3:54:36 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 3:54:36 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 3:54:36 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:31:48 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:31:48 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:31:48 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:31:48 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:32:46 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:32:46 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:32:46 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:32:46 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:33:11 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:33:11 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:33:11 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:33:11 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:34:44 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:34:44 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:34:44 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:34:44 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:35:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:35:43 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:35:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:35:43 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:37:01 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:37:01 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:39:17 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:39:17 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:40:19 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:40:19 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:40:39 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:40:39 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:41:17 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:41:17 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:42:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:42:24 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:42:54 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:42:54 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:43:36 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: , Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:43:36 PM] - *** You must provide at least one recipient email address. ***
+[12/09/2022 5:44:36 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:51:14 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:54:53 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shippit <admin@138.197.102.237>, To: julian51541@hotmail.com, Subject: Asignar notificación de envío [Agent]
+[12/09/2022 5:55:28 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado en envío hn1670516987box
+[12/09/2022 5:55:28 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio hn1670516987box ha sido consolidado 
+[12/09/2022 5:58:13 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío hn1670516987box
+[12/09/2022 5:58:14 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio hn1670516987box ha sido consolidado 

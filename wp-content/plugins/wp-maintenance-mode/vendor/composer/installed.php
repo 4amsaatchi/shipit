@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'codeinwp/wp-maintenance-mode',
-        'pretty_version' => '2.5.4',
-        'version' => '2.5.4.0',
+        'pretty_version' => '2.6.1',
+        'version' => '2.6.1.0',
         'reference' => NULL,
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
@@ -20,8 +20,8 @@
             'dev_requirement' => false,
         ),
         'codeinwp/wp-maintenance-mode' => array(
-            'pretty_version' => '2.5.4',
-            'version' => '2.5.4.0',
+            'pretty_version' => '2.6.1',
+            'version' => '2.6.1.0',
             'reference' => NULL,
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',

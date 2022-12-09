@@ -1,5 +1,13 @@
 <?php
 
+function get_estadoparaconsolidar() {
+	return 'En Shipit! Miami';
+}
+
+function get_estadoconsolidado(){
+	return "Pendiente de pago";
+}
+
 function getorderuser() {
 	/*$args = array(
        'post_type' => 'wpcargo_shipment',
@@ -20,13 +28,13 @@ function getorderuser() {
             'compare'      => '=',
         ),
         //meta field's second condition
-        array(
+        /*array(
             'key'          => 'wpcargo_status',
-            'value'        => 'SU ENVIO ESTA SIENDO CONSOLIDADO',
+            'value'        => 'En Shipit! Miami',
             //I think you really want != instead of NOT LIKE, fix me if I'm wrong
             //'compare'      => 'NOT LIKE',
             'compare'      => '=',
-        )
+        )*/
     ),
 
 );
@@ -62,11 +70,22 @@ add_action( 'wp_ajax_loadorder', 'loadorder' );
 
 
 function consolidarpedido() {
-	$result = 1;
+	$result = -1;
 	$idorder = $_POST['idorder'];	 
-	update_post_meta($idorder, 'wpcargo_status', 'ENVIO CONSOLIDADO Y EN COLA DE SALIDA DE BODEGA MIAMI');
+	//update_post_meta($idorder, 'wpcargo_status', get_estadoconsolidado());
 	$agente = get_post_meta($idorder, 'agent_fields', true);
-	enviarcorreoconsolidado($agente, $idorder);
+	$nombrepedido = get_post_meta($idorder, 'post_name', true);
+	$cliente = get_post_meta($idorder, 'registered_shipper', true); 
+	$urlenvio = site_url()."/envio?idorden=".$idorder;
+	
+	if ($agente):
+	enviarcorreoconsolidadoagente($agente, $nombrepedido, $urlenvio);	
+	endif;
+
+
+	enviarcorreoconsolidadocliente($cliente, $nombrepedido);
+
+	
 	echo json_encode(array("result"=>$result));
 	wp_die();
 
@@ -76,11 +95,93 @@ add_action( 'wp_ajax_nopriv_consolidarpedido', 'consolidarpedido' );
 add_action( 'wp_ajax_consolidarpedido', 'consolidarpedido' );
 
 
-function enviarcorreoconsolidado($agente, $idorder){
-	$user = get_user_by( 'id', intval($agente) );  
-	$nombrepedido = get_post_meta($idorder, 'post_name', true);
-	$message = "EL pedido ".$nombrepedido." ha sido consolidado";
-	wp_mail( strval($user->user_email), "Consolidación de pedido", $message);
+function enviarcorreoconsolidadoagente($agente, $nombrepedido,$urlenvio){
+  $user = get_user_by( 'id', intval($agente) );  
+  $nombre = $tuser->user_nicename;
+	
+ $headers = array('Content-Type: text/html; charset=UTF-8');     
+
+      $postdata = http_build_query(
+
+        array(        
+        		'nombre' => $nombre,    
+
+            'idorden'   => $nombrepedido,               
+
+            "url" => site_url(),
+
+            "urlenvio" => $urlenvio
+
+            )
+
+        );
+
+      $opts = array('http' =>
+
+            array(
+
+                'method'  => 'POST',
+
+                'header'  => 'Content-type: application/x-www-form-urlencoded',
+
+                'content' => $postdata
+
+            )
+
+        );
+
+      $context  = stream_context_create($opts);      
+
+      $html = file_get_contents(get_stylesheet_directory_uri()."/templates/emailenvioconsolidadoagente.php", false, $context); 
+
+      $envio= wp_mail( $user->user_email, "Se ha consolidado el envío ".$nombrepedido, $html, $headers );
+
+      return $envio;
+}
+
+function enviarcorreoconsolidadocliente($cliente, $nombrepedido){
+	$tuser = get_user_by('ID', $cliente);	
+  $nombre = get_user_meta( $cliente, 'first_name', true );;
+  $correo = $tuser->user_email;
+
+  
+	 $headers = array('Content-Type: text/html; charset=UTF-8');     
+
+        $postdata = http_build_query(
+
+          array(
+
+              'nombre' => $nombre,
+
+              'idorden'   => $nombrepedido,               
+
+              "url" => site_url()
+
+              )
+
+          );
+
+        $opts = array('http' =>
+
+              array(
+
+                  'method'  => 'POST',
+
+                  'header'  => 'Content-type: application/x-www-form-urlencoded',
+
+                  'content' => $postdata
+
+              )
+
+          );
+
+        $context  = stream_context_create($opts);      
+
+        $html = file_get_contents(get_stylesheet_directory_uri()."/templates/emailenvioconsolidadocliente.php", false, $context); 
+
+        $envio= wp_mail( $correo, "Su envio ".$nombrepedido." ha sido consolidado ", $html, $headers );
+
+        return $envio;
 }
 
 
@@ -151,7 +252,7 @@ function asignarapedido() {
 		$info = array('post_type'=>'wpcargo_shipment', 'post_title'=>$title, 'post_status' => 'publish');
 		$orderid = wp_insert_post($info);
 		if ($orderid != 0){
-		update_post_meta($orderid, 'wpcargo_status', 'SUS PAQUETES ESTAN SIENDO CONSOLIDADOS');
+		update_post_meta($orderid, 'wpcargo_status', 'En Shipit! Miami');
 		update_post_meta($orderid, 'registered_shipper', $iduser);
 		add_post_meta($orderid, 'wpc-multiple-package', "");
 		agregarpaquete($orderid, $idpaquete);		
@@ -159,12 +260,18 @@ function asignarapedido() {
 			$result= -1;
 		}
 	} else {
-		
+		$title = get_the_title( $orderid );
 		agregarpaquete($orderid, $idpaquete);
 		$result = 1;
 	}
 	
 	if ($result == 1){
+	$tuser = get_user_by('ID', $iduser);
+	
+    $nombre = $tuser->user_nicename;
+    $correo = $tuser->user_email;
+    
+	enviarcorreopreconsolidacion($nombre, $title, $correo);
 	wp_update_post(array(
         'ID'    =>  $idpaquete,
         'post_status'   =>  'trash'
@@ -233,7 +340,7 @@ $args = array(
       $idorder = -1;
     endif;*/
 
-$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SUS PAQUETES ESTAN SIENDO CONSOLIDADOS' ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
+$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = get_estadoparaconsolidar() ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
 
 $results = $wpdb->get_results($sql);
 
@@ -264,4 +371,67 @@ function agregarpaquete($orderid,$idpaquete) {
 	array_push($paquetes, array("wpc-pm-description"=>$descripcion, 'store'=>$tienda, "tracking"=>$trackinid, "factura"=>$factura, "fechaestimada"=> $fechaestimada));
 	update_post_meta($orderid, 'wpc-multiple-package', $paquetes);	
 }
+
+
+function enviarcorreopreconsolidacion($nombre, $idorden, $correo){
+
+        
+
+        $headers = array('Content-Type: text/html; charset=UTF-8');     
+
+        $postdata = http_build_query(
+
+          array(
+
+              'nombre' => $nombre,
+
+              'idorden'   => $idorden,               
+
+              "url" => site_url()
+
+              )
+
+          );
+
+        $opts = array('http' =>
+
+              array(
+
+                  'method'  => 'POST',
+
+                  'header'  => 'Content-type: application/x-www-form-urlencoded',
+
+                  'content' => $postdata
+
+              )
+
+          );
+
+        $context  = stream_context_create($opts);      
+
+        $html = file_get_contents(get_stylesheet_directory_uri()."/templates/emailregistropreentrega.php", false, $context); 
+
+        $envio= wp_mail( $correo, "Se ha agregado un nuevo paquete a tu envio ".$idorden, $html, $headers );
+
+        return $envio;
+
+}
+
+
+function nombreusuario1() {
+return get_user_meta( get_current_user_id(), 'first_name', true );;
+}
+add_shortcode('nombreusuario', 'nombreusuario1');
+
+function retornaragente(){
+	$agentes = get_users( array( 'role__in' => array( 'WPCargo Agent' ) ) );
+}
+/*
+function get_classestado($estado1, $estado2){
+	if ($estado1 == $estado2){
+
+	} else {
+		return "";
+	}
+}*/
 ?>

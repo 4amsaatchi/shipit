@@ -1,4 +1,6 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) exit;
+
 class WPCargo{
 	public $status;
 	public $settings;
@@ -29,6 +31,7 @@ class WPCargo{
 	public $number_digit;
 	public $barcode_type;
 	public $barcode_size;
+
 	function __construct( ){
 		$this->status 		= $this->status();
 		$this->settings 	= $this->settings();
@@ -51,7 +54,7 @@ class WPCargo{
 		$this->agents  		= $this->agents();
 		$this->prefix  		= $this->prefix();
 		$this->suffix  		= $this->suffix();
-		$this->users 		= $this->all_wpcargo_users();
+		// $this->users 		= $this->all_wpcargo_users();
 		$this->time_format 	= $this->time_format();
 		$this->date_format 	= $this->date_format();
 		$this->datetime_format 	= $this->datetime_format();
@@ -61,6 +64,7 @@ class WPCargo{
 		$this->barcode_size = $this->barcode_size();
 		$this->autogenerate_title();
 	}
+
 	/*
 	** Public Functions
 	*/
@@ -250,23 +254,28 @@ class WPCargo{
 		}
 		return $date;
 	}
-	function agents(){
-		$users = array();
-		$args = array(
-		'role__in'     => array('cargo_agent'),
-		 );
-		$agents = get_users( $args );
-		if( !empty($agents) ){
-			foreach ($agents as $user ) {
-				$user_fullname = $user->display_name;
-				if( !empty( $user->first_name ) && !empty( $user->last_name ) ){
-					$user_fullname = $user->first_name.' '.$user->last_name;
-				}
-				$users[$user->ID] = $user_fullname;
-			}
+	public function agents(){
+		global $wpdb;
+
+		$sql = "SELECT * FROM {$wpdb->prefix}users AS tbluser LEFT JOIN {$wpdb->prefix}usermeta AS tbluserdata ON tbluser.ID = tbluserdata.user_id WHERE tbluserdata.meta_key LIKE 'wp_capabilities'";
+		$results =  $wpdb->get_results( $sql, OBJECT );
+
+		$agent_name	= array();
+		$users		= array();
+		foreach( $results as $user ){
+			array_push( $agent_name, array( 'id' =>$user->ID,
+										'name'=>$user->display_name,
+										'role'=>array_keys(maybe_unserialize($user->meta_value) ) ) );
+		}
+
+		foreach( $agent_name as $aget_user=>$agent){
+			if( in_array('cargo_agent', $agent['role']) ){
+				$users[$agent['id']] = $agent['name'];
+			}	
 		}
 		return $users;
 	}
+
 	function get_shipment_agent( $shipmentID ){
 		$agent = (int)get_post_meta( $shipmentID, 'agent_fields', true );
 		if( !is_numeric( $agent ) ){
@@ -315,9 +324,11 @@ class WPCargo{
 		return $datetime_format;
 	}
 	protected function all_wpcargo_users( ){
+		global $wpdb;
 		$wpcargo_args 	= apply_filters( 'all_wpcargo_users', array(
 			'role__in'     => wpcargo_user_roles_list()
 		) );
+
 		$all_wpcargo_users = get_users( $wpcargo_args );
 		return $all_wpcargo_users;
 	}
@@ -372,8 +383,10 @@ class WPCargo{
 	public function is_title_exist( $title = '' ){
 		global $wpdb;
 		$sql 	= $wpdb->prepare( "SELECT COUNT(*) FROM `{$wpdb->prefix}posts` WHERE `post_type` LIKE 'wpcargo_shipment' AND `post_status` IN ('publish', 'pending', 'draft') AND `post_title` LIKE %s", $title );
+		$sql  	= apply_filters( 'wpcargo_is_title_exist_sql', $sql, $title  );
 		$result =  $wpdb->get_var( $sql );
 		return $result;
 	}
 }
+
 $wpcargo = new WPCargo();

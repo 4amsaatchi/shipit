@@ -6,9 +6,9 @@
 	<div class="colpreentrega">
 		<label>Nombre de usuario</label>
 	</div>
-	<div class="colpreentrega">
+	<!--<div class="colpreentrega">
 		<label>Id preentrega</label>
-	</div>
+	</div>-->
 	<div class="colpreentrega">
 		<label>Fecha preevista</label>
 	</div>
@@ -19,7 +19,10 @@
 		<label>Tienda ingreso</label>
 	</div>	
 	<div class="colpreentrega">
-		<label>Pdf</label>
+		<label>Email</label>
+	</div>	
+	<div class="colpreentrega">
+		<label>Factura</label>
 	</div>	
 	<div class="colpreentrega">
 		<label>Agregar</label>
@@ -33,15 +36,16 @@ $wpb_all_query = new WP_Query(array('post_type'=>'preentregas', 'post_status'=>'
 	<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); 
 			$author_id = get_post_field ('post_author', get_the_ID());
 			$display_name = get_the_author_meta( 'display_name' , $author_id ); 
+			$email = get_the_author_meta( 'email' , $author_id ); 
 		?>
 
 	<div class="rowpreentregas">
 		<div class="colpreentrega">
 			<?= $display_name; ?>
 		</div>
-		<div class="colpreentrega">
-			<?= get_the_ID(); ?>
-		</div>
+		<!--<div class="colpreentrega">
+			<?php //get_the_ID(); ?>
+		</div>-->
 		<div class="colpreentrega">
 			<?= get_post_meta(get_the_ID(), 'fechaestimada', TRUE); ?>
 		</div>
@@ -52,7 +56,10 @@ $wpb_all_query = new WP_Query(array('post_type'=>'preentregas', 'post_status'=>'
 			<?= get_post_meta(get_the_ID(), 'tienda', TRUE); ?>
 		</div>
 		<div class="colpreentrega">
-			<a href="<?= get_post_meta(get_the_ID(), 'factura', TRUE); ?>" target="_blank"> Descargar PDF </a>		
+			<a href="mailto:<?= $email; ?>" target="_blank"><?= $email; ?></a>		
+		</div>
+		<div class="colpreentrega">
+			<a href="<?= get_post_meta(get_the_ID(), 'factura', TRUE); ?>" target="_blank">Descargar </a>		
 		</div>
 		<div class="colpreentrega">
 			<a data-id="<?= get_the_ID(); ?>" data-user="<?= $author_id; ?>" class="btncons"> Agregar a envío <br>en consolidación </a>
@@ -70,13 +77,17 @@ wp_reset_query();
 
 <style type="text/css">
 	
+	.rowpreentregas:nth-child(2n+3) {
+		background: #f4f4f4;
+	}
 	div.rowpreentregas {
 		display: inline-flex;
-		width: 100%;
+		width: 102%;
+		background: #FFF;
 	}
 
 	.colpreentrega {
-		background: #eaeaea;
+		/*background: #eaeaea;*/
 		padding: 20px;
 		width: 14%;
 	}
@@ -108,6 +119,10 @@ wp_reset_query();
 	.btncons:hover {
 		background: #000;
 		color: #FFF;
+	}
+
+	#listadopreentregas {
+		border: 1px solid #f53c5e;
 	}
 </style>
 

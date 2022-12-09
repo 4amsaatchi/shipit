@@ -2,30 +2,36 @@
 	$orders = getorderuser();	
 ?>
 <div id="shipment-list">
-	<table class="table wpcargo-table-responsive-md wpcargo-table">
-        <thead>
-            <tr>
-                <th>No. seguimiento :</th>
-				<th>Ver más</th>
-			</tr>
-		</thead>
-		<tbody>
+	<div class="tablaenvios">
+		<div class="cabecera rowenvios">
+			   <div>No. seguimiento</div>
+			   <div>Detalles</div>
+		</div>
+       
+		
 	
 
 		<?php if ( $orders->have_posts() ) : while ( $orders->have_posts() ) : $orders->the_post(); ?>
 
 	
 			
-						<tr>
-						 	<td><?= get_the_title(); ?></td>															
-							<td><a class="view-shipment" href="#" data-id="<?= get_the_ID(); ?>">Ver detalles</a></td>								
-						 </tr>
+						<div class="rowenvios">
+						 	<div><?= get_the_title(); ?></div>															
+							<div class="containerbotones">
+								<a class="verdetalles" href="<?= site_url()."/envio?idenvio=".get_the_ID() ?>" data-id="<?= get_the_ID(); ?>">Ver detalles</a>
+								<?php if (get_post_meta(get_the_ID(), 'wpcargo_status', true) == get_estadoparaconsolidar()): ?>
+									<a href="" class="btnshipit btnconsolidar" data-id="<?= get_the_ID(); ?>">CONSOLIDAR</a>
+								<?php else: ?>
+									<span class="consolidado">CONSOLIDADO</span>
+								<?php endif; ?>								 
+							</div>								
+						 </div>
 			
 
 		<?php	endwhile; endif;
 			wp_reset_query();?>
-		</tbody>		
-	</table>		
+			
+	</div>	
 </div>
 
     
@@ -63,9 +69,14 @@
 </div>
 
 <style type="text/css">
-	
+
+
 	.wpcargo-modal {
 		display: none;
+	}
+
+	.btnconsolidar{ 
+		color: #FFF !important;
 	}
 
 	#btnconsolidar {
@@ -94,7 +105,7 @@
         var nonce = "<?= wp_create_nonce( 'my-ajax-nonce' ); ?>";
         
 
-
+/*
 	    $(".view-shipment").on('click',function(event) {
 	    	var idorder = $(this).attr("data-id");
 	    	console.log(idorder);
@@ -111,39 +122,48 @@
 	        });
 	    	$("#view-shipment-modalcustom").show();	    	
 
-	    });
+	    });*/
 
-	        $("#btnconsolidar").on('click',function(event) {
-	        	alert("CONSOLIDAR");
-	    	var idorder = $(this).attr("data-id");
-	    	console.log(idorder);
-	    	event.preventDefault();
+	        $(".btnconsolidar").on('click',function(event) {
 
-	    	jQuery.ajax({
-            type: "post",
-            dataType: 'json',
-            url: url,
-            data: "action=consolidarpedido&nonce=" + nonce +"&idorder="+idorder,
-            success: function(result){            		
-            	
-            	console.log(result.result);
-            		if (result.result == 1){
-            			alert("ENVIO CONSOLIDADO");
-            			location.reload();
+	        	if (confirm("¿Estas seguro de consolidar este pedido?") == true) {			        	
+			    	var idorder = $(this).attr("data-id");
+			    	console.log(idorder);
+			    	event.preventDefault();
 
-            		}else {
-            			alert("ERROR");
-            		}
-	            },
-	          error: function (error) {
-		        console.log(error);
-		        
-		      }
+			    	jQuery.ajax({
+		            type: "post",
+		            dataType: 'json',
+		            url: url,
+		            data: "action=consolidarpedido&nonce=" + nonce +"&idorder="+idorder,
+		            success: function(result){            		
+		            	
+		            	console.log(result.result);
+		            		if (result.result == 1){
+		            			alert("ENVIO CONSOLIDADO");
+		            			location.reload();
 
-	        });
+		            		}else {
+		            			alert("ERROR");
+		            		}
+			            },
+			          error: function (error) {
+				        console.log(error);
+				        
+				      }
+
+			        });
+			    }
 	    		    	
 
 	    	});
 	});
 	
 </script>
+<h1>test</h1>
+<?php 
+
+$agentes = get_users(array("role"=>"cargo_agent ")  );
+print_r($agentes);
+/*print_r(wp_roles());*/
+?>

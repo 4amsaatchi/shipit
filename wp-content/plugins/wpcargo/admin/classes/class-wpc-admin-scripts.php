@@ -62,6 +62,7 @@ class WPCargo_Admin_Scripts{
 	}
 }
 new WPCargo_Admin_Scripts;
+
 add_action('admin_head', function(){
 	$options 		= get_option('wpcargo_option_settings');
 	$baseColor 		= '#00A924';

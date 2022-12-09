@@ -474,8 +474,10 @@ function wpcargo_shipment_history_map_callback( $shipment_id ){
 }
 function wpcargo_track_shipment_status_result( $shimpment_details ){
 		$shipment_status = esc_html( get_post_meta( $shimpment_details->ID, 'wpcargo_status', true ) );
+        $class_status   = strtolower( $shipment_status );
+        $class_status   = str_replace(' ', '_', $class_status );
 		?>
-		<div id="shipment-status" class="wpcargo-row" style="text-align:center;">
+		<div id="shipment-status" class="wpcargo-row <?php echo $class_status;?>" style="text-align:center;">
 			<p id="result-status-header"><?php echo apply_filters( 'wpcargo_track_shipment_status_result_title', esc_html__( 'Shipment Status: ', 'wpcargo' ) ); ?><?php echo esc_html($shipment_status); ?></p>
 		</div>
 		<?php

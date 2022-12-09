@@ -3,9 +3,9 @@
 Contributors: WPTaskforce
 Donate link: https://wpcargo.com/
 Tags: transportation management, status tracking, shipment tracking, order tracking, delivery tracking, tracking system, package tracking, courier tracking, order management, order status, order shortcode, order management system, order tracking system, status tracking system, status tracking software, delivery tracking system
-Tested up to: 6.0.1
+Tested up to: 6.1.1
 Requires PHP: 7.2
-Stable tag: 6.9.9
+Stable tag: 6.10.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -123,6 +123,17 @@ Single Page with results:[wpcargo_trackform]
 3. Shipment Results
 
 == Changelog ==
+
+= 6.10.1 =
+
+• fixed issue - Function WP_User_Query::query was called incorrectly. User queries should not be run before the plugins_loaded hook.
+• Added current shipment status as class in the frontend trackform.
+
+
+= 6.9.10 =
+- Add additional filter hook "wpcargo_is_title_exist_sql" to customize shipment number checker SQL statement
+- Fixed Error on array value in string replace for the email notification
+- Update wpcargo_can_track_shipment function to accept either POST or GET super global variable value for tracking shipment
 
 = 6.9.9 =
 - Fixed email notification in bulk updates not working.

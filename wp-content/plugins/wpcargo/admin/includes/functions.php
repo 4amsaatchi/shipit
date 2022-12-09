@@ -35,7 +35,7 @@ function wpcargo_admin_include_template( $file_name, $shipment ){
     include_once( $template_path ); 
 }
 function wpcargo_can_track_shipment( ) {
-    $shipment_number = isset( $_POST[wpcargo_track_meta()] ) ? sanitize_text_field( $_POST[wpcargo_track_meta()] ) : null;
+    $shipment_number = isset( $_REQUEST[wpcargo_track_meta()] ) ? sanitize_text_field( urldecode($_REQUEST[wpcargo_track_meta()]) ) : null;
     return apply_filters( 'wpcargo_can_track_shipment', $shipment_number );
 }
 function wpcargo_track_meta( ) {
@@ -221,7 +221,7 @@ function wpcargo_email_replace_shortcodes_list( $post_id ){
                 }
                 $replace_shortcodes[] = $reg_email;
             }else{
-                $meta_value = maybe_unserialize( esc_html( get_post_meta( $post_id, $shortcode, true ) ) );
+                $meta_value = maybe_unserialize( get_post_meta( $post_id, $shortcode, true ) );
                 $meta_value = apply_filters( 'wpcargo_shortcode_meta_value', $meta_value, $shortcode, $post_id );
                 if( is_array( $meta_value ) ){
                     $meta_value = implode(', ',$meta_value );

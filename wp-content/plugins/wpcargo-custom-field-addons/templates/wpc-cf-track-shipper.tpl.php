@@ -53,6 +53,17 @@
 						elseif( $field->field_type == 'address' ) {
 							$address = wpccf_get_address( $shipment_id, $field->field_key);							
 							echo '<p><span class="label">'.$field_label.' : </span>'.$address.'</p>';
+						}
+						elseif( $field->field_type == 'url' ) {
+							$field_key 		= maybe_unserialize( $field_key );
+							$field_key 		= is_array( $field_key ) ? $field_key : array();
+							$target_blank 	= count($field_key) == 3 ? 'target="_blank"' :'';
+							$target_blank = count($field_key) == 3 ? 'target="_blank"' :'';
+							if( !empty( $field_key ) ):
+								echo '<p><span class="label">'.$field_label.' : </span>'.'<a href="'.$field_key[1].'" '.$target_blank.' >'.$field_key[0].'</a>'.'</p>';
+							else:
+								echo '<p><span class="label">'.$field_label.' : </span></p>';
+							endif;
 						}						
 						else{
 							echo '<p><span class="label">'.$field_label.' : </span>'.$field_key.'</p>';
@@ -72,6 +83,7 @@
                     foreach( $receiver_fields as $field){
 						$field_key 		= get_post_meta($shipment_id, $field->field_key, TRUE);
 						$field_label 	= stripslashes( $field->label );
+
 						if( is_serialized($field_key) ){
 							if( $field->field_type == 'url' ) {
 								$url_key_unserialized = unserialize($field_key);
@@ -116,6 +128,17 @@
 						elseif( $field->field_type == 'address' ) {
 							$address = wpccf_get_address( $shipment_id, $field->field_key);							
 							echo '<p><span class="label">'.$field_label.' : </span>'.$address.'</p>';
+						}
+						elseif( $field->field_type == 'url' ) {
+							$field_key 		= maybe_unserialize( $field_key );
+							$field_key 		= is_array( $field_key ) ? $field_key : array();
+							$target_blank 	= count($field_key) == 3 ? 'target="_blank"' :'';
+							$target_blank = count($field_key) == 3 ? 'target="_blank"' :'';
+							if( !empty( $field_key ) ):
+								echo '<p><span class="label">'.$field_label.' : </span>'.'<a href="'.$field_key[1].'" '.$target_blank.' >'.$field_key[0].'</a>'.'</p>';
+							else:
+								echo '<p><span class="label">'.$field_label.' : </span></p>';
+							endif;
 						}
 						else{
 							echo '<p><span class="label">'.$field_label.' : </span>'.$field_key.'</p>';

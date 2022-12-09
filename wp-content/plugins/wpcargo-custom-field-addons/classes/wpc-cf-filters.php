@@ -67,7 +67,7 @@ class Track_Form_Custom_Fields {
 				}
 				$shipment_values[ $req_key ] = sanitize_text_field( $req_val );
 			}
-			$shipment_values = array_filter( $shipment_values );
+			$shipment_values = apply_filters( 'wpccf_multiple_value_query', $shipment_values );
 			if(!empty($shipment_values)){
 				$sql = "SELECT m.ID FROM {$wpdb->prefix}posts m ";
 				$meta_counter = 1;

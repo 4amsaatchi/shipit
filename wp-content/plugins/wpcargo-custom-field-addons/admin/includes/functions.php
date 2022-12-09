@@ -250,6 +250,11 @@ function wpccf_get_shipment_sections(){
     }
     return apply_filters( 'wpccf_shipment_sections', $formatted_section );
 }
+function wpccf_get_table_column_names(){
+	global $wpdb;
+	// wpcargo_custom_fields - Plugin table name
+	return $wpdb->get_col("DESC `".$wpdb->prefix."wpcargo_custom_fields`", 0);
+}
 /*
 * 	WPCAGRO FILTERS 
 */

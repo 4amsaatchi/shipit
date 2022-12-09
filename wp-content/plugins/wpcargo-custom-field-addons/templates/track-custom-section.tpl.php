@@ -99,6 +99,22 @@ foreach( $sections as $section_key => $section_label ){
 						<p class="wpcargo-label-info"><?php echo $address; ?></p>			
 					</div>			
 					<?php		
+				}elseif( $field->field_type == 'url' ) {
+
+					$field_key 		= maybe_unserialize( $field_key );
+					$field_key 		= is_array( $field_key ) ? $field_key : array();
+					$target_blank 	= count($field_key) == 3 ? 'target="_blank"' :'';
+
+					?>
+					<div class="wpcargo-col-md-4">
+						<p class="wpcargo-label"><strong><?php echo $field_label; ?>:</strong></p>
+						<?php if( !empty( $field_key ) ): ?>
+						<p class="wpcargo-label-info">
+							<a href="<?php echo $field_key[1]; ?>" <?php echo $target_blank; ?>><?php echo $field_key[0]; ?></a>
+						</p>
+						<?php endif; ?>
+					</div>
+					<?php		
 				}else{
 					$field_key = get_post_meta($shipment_id, $field->field_key, TRUE);
 					$value = maybe_unserialize( $field_key  );

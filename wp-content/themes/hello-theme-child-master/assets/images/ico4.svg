@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="ico-documento" transform="translate(-15538 -3100)">
+    <g id="Elipse_80" data-name="Elipse 80" transform="translate(15538 3100)" fill="none" stroke="#f53c5d" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 8">
+      <circle cx="41" cy="41" r="41" stroke="none"/>
+      <circle cx="41" cy="41" r="39.5" fill="none"/>
+    </g>
+    <g id="ico-aduanas" transform="translate(15553.737 3121.144)">
+      <g id="Grupo_3972" data-name="Grupo 3972" transform="translate(11)">
+        <g id="Grupo_3971" data-name="Grupo 3971" transform="translate(0)">
+          <path id="Trazado_2574" data-name="Trazado 2574" d="M72.291,155.582H85.383a.791.791,0,1,0,0-1.582H72.291a.791.791,0,1,0,0,1.582Z" transform="translate(-66.714 -141.818)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+          <path id="Trazado_2575" data-name="Trazado 2575" d="M90.09,220h-17.8a.791.791,0,1,0,0,1.582h17.8a.791.791,0,1,0,0-1.582Z" transform="translate(-66.714 -202.597)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+          <path id="Trazado_2576" data-name="Trazado 2576" d="M90.09,286h-17.8a.791.791,0,1,0,0,1.582h17.8a.791.791,0,1,0,0-1.582Z" transform="translate(-66.714 -263.376)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+          <path id="Trazado_2577" data-name="Trazado 2577" d="M90.09,352h-17.8a.791.791,0,1,0,0,1.582h17.8a.791.791,0,1,0,0-1.582Z" transform="translate(-66.714 -324.155)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+          <path id="Trazado_2578" data-name="Trazado 2578" d="M277.031,154h-1.74a.791.791,0,0,0,0,1.582h1.74a.791.791,0,1,0,0-1.582Z" transform="translate(-253.655 -141.818)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+          <path id="Trazado_2579" data-name="Trazado 2579" d="M48.18,30.014H44.406a.339.339,0,0,1-.339-.339v-.789a1.921,1.921,0,0,0-3.28-1.358l-.834.834V8.148a.791.791,0,0,0-.232-.559L32.364.232A.791.791,0,0,0,31.805,0H11.791A.791.791,0,0,0,11,.791V38.92a.791.791,0,0,0,.791.791H39.162a.791.791,0,0,0,.791-.791v-.608l.834.834a1.921,1.921,0,0,0,3.28-1.359V37a.339.339,0,0,1,.339-.339H48.18a.791.791,0,0,0,.791-.791V30.805A.791.791,0,0,0,48.18,30.014ZM32.6,2.7l4.656,4.656H32.6Zm5.775,35.428H12.582V1.582H31.014V8.148a.791.791,0,0,0,.791.791h6.566v21l-2.834,2.834a.791.791,0,0,0,0,1.119l2.834,2.834Zm9.018-3.052H44.406A1.923,1.923,0,0,0,42.484,37v.789a.339.339,0,0,1-.579.24l-4.691-4.691,4.691-4.691a.339.339,0,0,1,.579.24v.789A1.923,1.923,0,0,0,44.406,31.6h2.983Z" transform="translate(-11)" fill="#353b49" stroke="#353b49" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

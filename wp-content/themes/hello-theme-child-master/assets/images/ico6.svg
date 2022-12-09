@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="ico-camion-2" transform="translate(-15866 -3100)">
+    <g id="Elipse_81" data-name="Elipse 81" transform="translate(15866 3100)" fill="none" stroke="#f53c5d" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 8">
+      <circle cx="41" cy="41" r="41" stroke="none"/>
+      <circle cx="41" cy="41" r="39.5" fill="none"/>
+    </g>
+    <g id="ico-reparto" transform="translate(15887.724 3127.799)">
+      <path id="Trazado_76" data-name="Trazado 76" d="M2,9H28.192V32.11H14.326" transform="translate(-1.987 -9)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <circle id="Elipse_43" data-name="Elipse 43" cx="3.071" cy="3.071" r="3.071" transform="translate(30.707 20.261)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <circle id="Elipse_44" data-name="Elipse 44" cx="3.071" cy="3.071" r="3.071" transform="translate(6.141 20.261)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="Trazado_77" data-name="Trazado 77" d="M19,29.948V13h9.244l6.163,7.7v9.244H29.785" transform="translate(7.205 -6.837)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Línea_27" data-name="Línea 27" x2="13.648" transform="translate(3.412 5.931)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Línea_28" data-name="Línea 28" x2="13.648" transform="translate(0 12.072)" fill="none" stroke="#353a49" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

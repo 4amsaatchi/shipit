@@ -8,6 +8,9 @@
     $( "#datepicker" ).datepicker();
   } );
 </script>
+<div class="cimagtra">
+				<img src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo-ship-it.png" alt="Logo shipit" id="logoshipit">
+</div>
 
 <form id="formpreentregas" action="" method="post" enctype="multipart/form-data">
 	<div class="rowform">
@@ -17,11 +20,13 @@
 		<input type="text" name="nombre" placeholder="Nombre paquete" required>
 	</div>
 	<div class="rowform">
-		<input type="text" name="trackingid" placeholder="Tracking id" required>
+		<input type="text" name="trackingid" placeholder="No. Tracking" required>
 	</div>
-	<div class="rowform">
-		<label> Factura - Soporte </label>
-		<input type="file" name="factura" placeholder="Factura o soporte" required>
+	<div class="rowform">		
+		<div class="file-select" id="src-file1" >
+			  <input type="file" name="factura" aria-label="Archivo" required>
+		</div>
+		<!--<input type="file" name="factura" placeholder="Factura o soporte" required>-->
 	</div>
 	<div class="rowform">		
 		<input type="datepicker" name="datepicker" id="datepicker" placeholder="Fecha estimada de ingreso" required>
@@ -30,9 +35,46 @@
 
 	</div>
 
-	<input type="submit" value="Agregar" id="btnsubmit">
+	<input class="btnshipit" type="submit" value="ENVIAR" id="btnsubmit">
 </form>
 <style type="text/css">
+
+	.file-select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: #f43c5c;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.file-select::before {
+  background-color: #f43c5c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  content: 'Seleccionar'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 100%;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#src-file1::before {
+  content: 'ADJUNTAR FACTURA PDF O JPG';
+}
+
 	.rowform {
 		margin-bottom: 15px;
 	}
@@ -41,9 +83,13 @@
 		width: 100%;
 	}
 
-	#btnsubmit{
+	#btnsubmit{		
 		display: block;
-		margin: 0px auto;
+		margin: 90px auto -10px;
+	}
+
+	#formpreentregas {
+		margin-top: 20px;
 	}
 </style>
 
@@ -81,9 +127,8 @@
 						            timeout: 600000,
 						            success: function (data) {
 
-						            	if (data.result != -1){
-						            		console.log(data);
-						            		alert("PREENTREGA REGISTRADA");
+						            	if (data.result != -1){						            		
+						            		elementorProFrontend.modules.popup.showPopup( { id: 2153 } );
 						            		form.reset();
 						            	} else {
 						            		alert("ERROR INTENTE NUEVAMENTE");
@@ -105,5 +150,11 @@
 
 	       
 	});
+	
+	jQuery(function($){
+$(document).on('click','.elementor-location-popup a', function(event){
+elementorProFrontend.modules.popup.closePopup( {}, event);
+});
+});
 	
 </script>

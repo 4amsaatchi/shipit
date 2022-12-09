@@ -1,21 +1,21 @@
-=== WP Maintenance Mode & Coming Soon===
+=== LightStart - Maintenance Mode, Coming Soon and Landing Page Builder ===
 Contributors: Themeisle
-Plugin Name: WP Maintenance Mode & Coming Soon
+Plugin Name: LightStart - Maintenance Mode, Coming Soon and Landing Page Builder
 Plugin URI: https://themeisle.com/
 Author: Themeisle
 Author URI: https://themeisle.com/
 Tags: maintenance mode, admin, administration, unavailable, coming soon, multisite, landing page, under construction, contact form, subscribe, countdown
 Requires at least: 3.5
-Tested up to: 6.0
-Stable tag: 2.5.4
+Tested up to: 6.1
+Stable tag: 2.6.1
 Requires PHP: 5.6
 License: GPL-2.0+
 
-Adds a splash page to your site that lets visitors know your site is down for maintenance. It's perfect for a coming soon page. The new Bot functionality is here!
+Easy Drag & Drop Page Builder that adds a splash page to your site that it's perfect for a coming soon page, maintenance or landing page.
 
 == Description ==
 
-Add a maintenance page to your blog that lets visitors know your blog is down for maintenance, or add a coming soon page for a new website. User with admin rights gets full access to the blog including the front end.
+Add a maintenance page to your blog that lets visitors know your blog is down for maintenance, add a coming soon page for a new website or create a landing page for an existing site. User with admin rights gets full access to the blog including the front end.
 
 Activate the plugin and your blog is in maintenance-mode, works and only registered users with enough rights can see the front end. You can use a date with a countdown timer for visitor information or set a value and unit for information.
 
@@ -23,10 +23,10 @@ Also works with WordPress Multisite installs (each blog from the network has its
 
 = Features =
 
-* Fully customizable (change colors, texts and backgrounds);
-* Subscription form (export emails to .csv file);
-* Countdown timer (remaining time);
-* Contact form (receive emails from visitors);
+* Fully customizable (change colors, texts and backgrounds).
+* Subscription form (export emails to .csv file).
+* Countdown timer (remaining time).
+* Contact form (receive emails from visitors).
 * Coming soon page;
 * Landing page templates;
 * WordPress multisite;
@@ -51,6 +51,7 @@ Developed by [Themeisle](https://themeisle.com)
 If you like this plugin, then consider checking out our other projects:
 
 * <a href="https://optimole.com/">Optimole</a> - Optimole is your all-in-one image optimization solution for WordPress & beyond.
+* <a href="https://wpshout.com/">WPShout</a> - In-Depth WordPress Tutorials for Developers
 * <a href="https://revive.social/">Revive Social</a> - Revive Old Posts helps you keep your content alive and in front the audiences that matter.
 * <a href="https://www.codeinwp.com/">CodeinWP</a> - CodeinWP stands for all-things-WordPress. From web design to freelancing and from development to business, your questions are covered.
 * <a href="https://domainwheel.com">DomainWheel</a> - Free Short Website name generator, with the help of AI, for instant ideas.
@@ -91,6 +92,22 @@ Notice: `wp-cron.php` is excluded by default.
 
 == Changelog ==
 
+##### [Version 2.6.1](https://github.com/Codeinwp/wp-maintenance-mode/compare/v2.6.0...v2.6.1) (2022-11-03)
+
+* Add a notice to announce the rebrand of the plugin
+
+
+
+
+#### [Version 2.6.0](https://github.com/Codeinwp/wp-maintenance-mode/compare/v2.5.4...v2.6.0) (2022-11-02)
+
+* Adds Landing pages templates
+* Adds more Coming soon and Maintenance mode templates
+* Rebrand the plugin into LightStart
+
+
+
+
 ##### [Version 2.5.4](https://github.com/Codeinwp/wp-maintenance-mode/compare/v2.5.3...v2.5.4) (2022-10-10)
 
 * Fix subscribers entry export for legacy forms.
@@ -108,9 +125,9 @@ Notice: `wp-cron.php` is excluded by default.
 
 ##### [Version 2.5.2](https://github.com/Codeinwp/wp-maintenance-mode/compare/v2.5.1...v2.5.2) (2022-09-27)
 
-* Fix maintenance mode issue for previously logged users [#321](https://github.com/Codeinwp/wp-maintenance-mode/issues/321) 
-* Allow comments into exclude textarea so that you can comment on the IP addresses for location, props [@joostdekeijzer](https://github.com/joostdekeijzer) 
-* Fix PHP notice errors on specific scenarios [#324](https://github.com/Codeinwp/wp-maintenance-mode/issues/324) 
+* Fix maintenance mode issue for previously logged users [#321](https://github.com/Codeinwp/wp-maintenance-mode/issues/321)
+* Allow comments into exclude textarea so that you can comment on the IP addresses for location, props [@joostdekeijzer](https://github.com/joostdekeijzer)
+* Fix PHP notice errors on specific scenarios [#324](https://github.com/Codeinwp/wp-maintenance-mode/issues/324)
 * Fix Otter for saving subscriber entry
 
 

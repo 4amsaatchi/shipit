@@ -8,7 +8,7 @@
 **/
 
 
-$postid= 1373;
+$postid= 2249;
  get_post_meta($postid, 'wpcargo_status', true)."<br>";
  $agente = get_post_meta($postid, 'agent_fields', true)."<br>";
   get_post_meta($postid, 'post_name', true)."<br>";
@@ -45,7 +45,7 @@ function get_all_meta($type){
 
           $a =  get_all_meta("wpcargo_shipment");
 
-//print_r($a);
+print_r($a);
 
 /*
 $emailbody =" <h1>TEST ONLINE SHORTCODE {shortcodeconsolidado} </h1>";
