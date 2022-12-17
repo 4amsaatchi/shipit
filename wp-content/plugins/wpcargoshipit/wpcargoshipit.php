@@ -121,29 +121,21 @@ function emailbodyshipit($idorder, $emailbody){
 function packages_list($idorder){
  	
 	$paquetes = get_post_meta($idorder, 'wpc-multiple-package', true); 
-	$html = '<table class="table wpcargo-table" style="width:100%;">
-		<thead>
-			<tr>
-														<th>Cant.</th>
-														<th>Tipo de pieza</th>
-														<th>Descripción</th>
-														<th>Peso (lbs)</th>
-														<th>Imagen paquete</th>
-														<th>Tienda</th>
-														<th>Tracking</th>
-							</tr>
-		</thead>
-		<tbody>';
+	$html = '<table class="table wpcargo-table" style="width:100%;"><thead><tr><th style="width: 25%; text-align:center">Descripción</th><th style="width: 25%: text-align:center">Imagen paquete</th><th style="width: 25%; text-align:center">Tienda</th><th style="width: 25%; text-align:center">Tracking</th></tr></thead><tbody>';
 
 	foreach ($paquetes as $paquete): 
 		$html .= '<tr class="package-row">';
-			$html .= "<td>".$paquete["wpc-pm-qty"]."</td>";			               
-			$html .= "<td>".$paquete["wpc-pm-piece-type"]."</td>";					            
-			$html .= "<td>".$paquete["wpc-pm-description"]."</td>";					               				            
-			$html .= "<td>".$paquete["wpc-pm-weight"]."</td>";								               
-			$html .= "<td class='colimagepa'><img src='".wp_get_attachment_image_src($paquete["imagen_paquete"])[0]."'></td>";					               					            
-			$html .= "<td>".$paquete["store"]."</td>";					               					            
-			$html .= "<td>".$paquete["tracking"]."</td>";
+			/*$html .= "<td>".$paquete["wpc-pm-qty"]."</td>";			               
+			$html .= "<td>".$paquete["wpc-pm-piece-type"]."</td>";					            */
+			$html .= "<td style='width: 25%; text-align:center'>".$paquete["wpc-pm-description"]."</td>";					               				            
+			/*$html .= "<td>".$paquete["wpc-pm-weight"]."</td>";*/
+			if ($paquete["imagen_paquete"] != ""){			               
+			$html .= "<td style='width: 25%; text-align:center' class='colimagepa'><img src='".wp_get_attachment_image_src($paquete["imagen_paquete"])[0]."'></td>";					               					            
+			} else {
+			$html .= "<td style='width: 25%; text-align:center' class='colimagepa'></td>";					               					            	
+			}
+			$html .= "<td style='width: 25%; text-align:center'>".$paquete["store"]."</td>";					               					            
+			$html .= "<td style='width: 25%; text-align:center'>".$paquete["tracking"]."</td>";
 	    $html .= '</tr>';
 	 endforeach;
 
@@ -218,3 +210,47 @@ function singleenvio(){
 
 
 add_shortcode('wpshipit_envio', 'singleenvio');
+
+/* New custom fields */
+
+function wpt_add_event_metaboxes() {
+	add_meta_box(
+		'wpshipit_paymentstatus',
+		'Pago de envío',
+		'wpshipit_paymentstatus',
+		'wpcargo_shipment',
+		'side',
+		'0'
+	);
+}
+
+
+
+function wpshipit_paymentstatus(){
+	global $post;
+    $meta_element_class = get_post_meta($post->ID, 'wpshipit_paymentstatus', true); //true ensures you get just one value instead of an array
+    ?>   
+    <label style="margin: 20px 0px; display: block;">Selecciona el estado de pago del pedido:  </label>
+    
+    <select name="wpshipit_paymentstatus" id="wpshipit_paymentstatus">      
+      <option value="Pendiente" <?php selected( $meta_element_class, 'Pendiente' ); ?>>Pago pendiente</option>
+      <option value="Efectuado" <?php selected( $meta_element_class, 'Efectuado' ); ?>>Pago efectuado</option>      
+    </select>
+    <?php
+}
+
+
+function so_save_metabox(){ 
+    global $post;
+    if(isset($_POST["wpshipit_paymentstatus"])){
+         //UPDATE: 
+        $meta_element_class = $_POST['wpshipit_paymentstatus'];
+        //END OF UPDATE
+
+        update_post_meta($post->ID, 'wpshipit_paymentstatus', $meta_element_class);
+        //print_r($_POST);
+    }
+}
+
+add_action( 'add_meta_boxes', 'wpt_add_event_metaboxes' );
+add_action('save_post', 'so_save_metabox');

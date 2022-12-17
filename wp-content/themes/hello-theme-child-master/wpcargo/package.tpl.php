@@ -29,6 +29,7 @@
 								$package_data = array_key_exists( $field_key, $data_value ) ? $data_value[$field_key] : '' ;
 								echo is_array( $package_data ) ? implode(',', $package_data ) : $package_data; 
 								else:
+									if ($data_value[$field_key] != "")
 									echo "<img src='".wp_get_attachment_image_src($data_value[$field_key])[0]."'>";
 								endif;
 							?>
@@ -49,3 +50,10 @@
 	</table>
 	<?php do_action('wpcargo_after_package_infomation', $shipment ); ?>
 </div>
+
+<style type="text/css">
+	.wpcargo-table thead th {
+		    background-color: #f43c5c;
+    		border-color: #f43c5c;
+	}
+</style>

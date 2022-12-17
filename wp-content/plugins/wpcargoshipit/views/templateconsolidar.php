@@ -95,6 +95,18 @@
 	.colimagepa {
 		text-align: center;
 	}
+
+	@media (max-width: 768px) {
+		.containerbotones {
+		    flex-direction: column;
+		}
+
+		.btnshipit {
+		    padding: 8px 20px;
+		    margin-top: 20px;	
+		}
+
+	}
 </style>
 
 <script type="text/javascript">
@@ -160,10 +172,3 @@
 	});
 	
 </script>
-<h1>test</h1>
-<?php 
-
-$agentes = get_users(array("role"=>"cargo_agent ")  );
-print_r($agentes);
-/*print_r(wp_roles());*/
-?>

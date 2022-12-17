@@ -24,8 +24,14 @@ $paquetes = get_post_meta($postid, 'wpc-multiple-package', true);
 //print_r($paquetes);
 //echo count($paquetes);
 foreach ($paquetes as $paquete) {
-	/*echo $paquete["wpc-pm-description"]." - ";
-	echo $paquete["imagen_paquete"]."<br>";  */
+	echo $paquete["wpc-pm-description"]." - ";
+  if ($paquete["imagen_paquete"] != ""){
+    echo "TIENE FOTO";
+  }else {
+    echo "NO TIENE FOTO";
+  }
+//print_r($paquete);
+	//echo $paquete["imagen_paquete"]."<br>";  
 }
 
 array_push($paquetes, array("wpc-pm-description"=>"descripcion", 'store'=>"Tienda", "tracking"=>"1235"));
@@ -123,7 +129,7 @@ $sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID
 
 $results = $wpdb->get_results($sql);
 if (count($results)> 0){
-  print_r($results[0]->ID);
+  /*print_r($results[0]->ID);*/
   echo "CON  RESULTADOS"; 
   } ELSE {
     echo "SIN RESULTADOS";

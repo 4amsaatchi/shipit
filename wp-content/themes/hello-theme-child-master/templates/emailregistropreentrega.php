@@ -391,7 +391,7 @@
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 14px" >                                                   
-                                                      <a href="<?= $_REQUEST['url']; ?>/consolidar-pedido" style="
+                                                      <a href="<?= $_REQUEST['url']; ?>/mis-envios" style="
                                                              font-size: 14px;
                                                              font-family: &quot;Work Sans&quot;, Sans-serif;
                                                              font-weight: 500;

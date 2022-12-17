@@ -70,13 +70,13 @@ add_action( 'wp_ajax_loadorder', 'loadorder' );
 
 
 function consolidarpedido() {
-	$result = -1;
+	$result = 1;
 	$idorder = $_POST['idorder'];	 
-	//update_post_meta($idorder, 'wpcargo_status', get_estadoconsolidado());
+	update_post_meta($idorder, 'wpcargo_status', get_estadoconsolidado());
 	$agente = get_post_meta($idorder, 'agent_fields', true);
 	$nombrepedido = get_post_meta($idorder, 'post_name', true);
 	$cliente = get_post_meta($idorder, 'registered_shipper', true); 
-	$urlenvio = site_url()."/envio?idorden=".$idorder;
+	$urlenvio = site_url()."/envio?idenvio=".$idorder;
 	
 	if ($agente):
 	enviarcorreoconsolidadoagente($agente, $nombrepedido, $urlenvio);	
@@ -246,9 +246,24 @@ function asignarapedido() {
 
 	if ($orderid == -1){
 		//Crear pedido de 0
-		$fecha = new DateTime();
-		$title = $fecha->getTimestamp();
-		$title = "hn".$title."box";
+		
+		/* Generar nombre aleatorio*/
+		$prefijo = get_option("wpcargo_option_settings")["wpcargo_title_prefix"];
+		$sufijo = get_option("wpcargo_title_suffix");
+		$ndigitos = get_option("wpcargo_title_numdigit"); 
+		$naleatorio = rand(1,5);
+		$datos = true;
+		do {
+		    $naleatorio = naleatorio($ndigitos);
+		    $title= $prefijo.$naleatorio.$sufijo;	
+			$args = array("post_type" => "wpcargo_shipment", "s" => $title);
+			$query = get_posts( $args );
+			if (!$query){
+				$datos = false;
+			}
+		} while ($datos);		
+		/* */
+
 		$info = array('post_type'=>'wpcargo_shipment', 'post_title'=>$title, 'post_status' => 'publish');
 		$orderid = wp_insert_post($info);
 		if ($orderid != 0){
@@ -266,12 +281,15 @@ function asignarapedido() {
 	}
 	
 	if ($result == 1){
-	$tuser = get_user_by('ID', $iduser);
-	
+		update_post_meta($orderid, 'agent_fields', retornaragente());
+
+		
+		$tuser = get_user_by('ID',$iduser);
     $nombre = $tuser->user_nicename;
     $correo = $tuser->user_email;
-    
-	enviarcorreopreconsolidacion($nombre, $title, $correo);
+  
+		enviarcorreopreconsolidacion($nombre, $title, $correo);
+
 	wp_update_post(array(
         'ID'    =>  $idpaquete,
         'post_status'   =>  'trash'
@@ -340,7 +358,7 @@ $args = array(
       $idorder = -1;
     endif;*/
 
-$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = get_estadoparaconsolidar() ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
+$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = '".get_estadoparaconsolidar()."' ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
 
 $results = $wpdb->get_results($sql);
 
@@ -424,7 +442,9 @@ return get_user_meta( get_current_user_id(), 'first_name', true );;
 add_shortcode('nombreusuario', 'nombreusuario1');
 
 function retornaragente(){
-	$agentes = get_users( array( 'role__in' => array( 'WPCargo Agent' ) ) );
+	/*$agentes = get_users( array( 'role__in' => array( 'WPCargo Agent' ) ) );*/
+	/*$tuser = get_user_by('ID',103);	*/
+	return 103;
 }
 /*
 function get_classestado($estado1, $estado2){
@@ -434,4 +454,15 @@ function get_classestado($estado1, $estado2){
 		return "";
 	}
 }*/
+
+function naleatorio($x){
+	if ($x > 0){
+		$x = $x-1;
+	}
+	$min = pow(10,$x);
+	$max = pow(10,$x+1)-1;
+	$value = rand($min, $max);
+	return $value;
+}
+
 ?>

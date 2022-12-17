@@ -62,7 +62,7 @@ $get_action 		= !empty($result_page_id) ? get_page_link($result_page_id) : '';
 
 <div class="wpcargo-track wpcargo">
 	<form method="post" name="wpcargo-track-form" action="<?php echo esc_html( $get_action ); ?>">
-		<?php wp_nonce_field( 'wpcargo_track_shipment_action', 'track_shipment_nonce' ); ?>
+		<?php /*wp_nonce_field( 'wpcargo_track_shipment_action', 'track_shipment_nonce' );*/ ?>
 		<div class="containertrack">
 			<div class="cimagtra">
 				<img src="<?= get_stylesheet_directory_uri() ?>/assets/images/pint.png" alt="Tracking pin">

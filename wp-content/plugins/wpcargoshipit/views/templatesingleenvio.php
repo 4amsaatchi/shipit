@@ -1,24 +1,38 @@
 <?php
 
 
+if (!isset($_GET['idenvio'])){
+	echo "<h3>Pedido no encontrado</h3>";
+	die();
+}
 
-
-$norder = 2249;
+$norder = $_GET['idenvio'];
 $orden = get_post($norder);
-
+if (!$orden){
+	echo "<h3>Pedido no encontrado</h3>";
+	die();
+}
 $estados = get_option("wpcargo_option_settings")["settings_shipment_status"];
 $estados = explode(",", $estados);
 unset($estados[2]); //Quitar pendiente de pago 
 $nestados = count($estados);
 $estadoactual = 	get_post_meta($norder, 'wpcargo_status', true);
+
+if ($estadoactual == get_estadoconsolidado()){
+	$estadoactual = get_estadoparaconsolidar();
+}
 $estadoactivo = "estadoactivo";
 $cont = 1;
 ?>
+
 <div id="containerenvio">
 	<div class="info1">
 		<h1>Orden No. <?= $orden->post_name; ?></h1>
 		<p>Gracias por confiar <?= do_shortcode( '[nombreusuario]' ); ?></p>
-		<span>Tu envío está en proceso</span>
+		<span>Tu envío se encuentra <?= $estadoactual; ?></span>
+		<?php if ( get_post_meta($norder, 'wpshipit_paymentstatus', true) != "") : ?>
+			<p> Estado de pago: <?= get_post_meta($norder, 'wpshipit_paymentstatus', true); ?> </p>
+		<?php endif; ?>
 	</div>
 	<div class="estadospedido">
 		
@@ -66,7 +80,7 @@ $cont = 1;
 					<div class="accion">
 						<p class="subtitulo">Tracking <?= $cont; ?></p>
 						<p class="ptracking"><?= $paquete["tracking"]; ?></p>
-						<a href="<?= $paquete["factura"]; ?>">Descargar Factura</a>
+						<a href="<?= $paquete["factura"]; ?>" download>Descargar Factura</a>
 						<p class="not"> Revisa antes de consolidar: Haz click en nuestro chat si quieres corregir datos o necesitas ayuda <a href="#">LINK CHAT</a></p>
 					</div>
 					
@@ -96,13 +110,15 @@ $cont = 1;
 				   <div>Fecha</div>
 				   <div>Observaciones</div>
 			</div>
-			<div class="rowenvios">
+			
 				<?php foreach ($historial as $histo): ?>
+				<div class="rowenvios">
 					<div><?= $histo["status"]; ?></div>
 					<div><?= $histo["date"]; ?> <?= $histo["time"]; ?> </div>
 					<div><?= $histo["remarks"]; ?></div>					
+				</div>
 				<?php endforeach; ?>
-			</div>
+			
 
 		<?php endif; ?>
 	       
@@ -233,5 +249,54 @@ $cont = 1;
 	    background: #5ac5f1;
 	    color: #FFF;
 	    padding: 20px 0px;
+	}
+
+	@media (max-width: 768px) {
+		
+
+		.info1 h1 {
+			font-size: 2rem;
+		}
+
+		div#containerenvio {
+    		margin-top: 30px;
+    		padding: 0px 6px;
+		}
+
+		.singlepaquete{
+			flex-direction: column;
+		}
+
+		.singlepaquete .colimg, .singlepaquete .accion {
+			width: 100%;
+		}
+
+		.estadospedido {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.e7 {
+		    width: 25%;
+		    margin-right: 3%;
+		    margin-bottom: 30px;
+		}
+
+		.txtestado {
+    		margin-left: auto;
+		}
+
+		.sepimg {
+			display: none;
+		}
+
+		.actualizaciones {
+			margin: 0px;
+		}
+
+		.rowenvios div {
+			font-size: 14px;
+		}
+
 	}
 </style>
