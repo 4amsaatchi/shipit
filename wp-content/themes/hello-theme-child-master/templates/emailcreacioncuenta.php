@@ -373,36 +373,39 @@
                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px">
+                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px;padding: 0px 20px">
                                                       Hola <?= $_REQUEST['nombre']; ?>
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; text-align: center; font-size: 14px" >
-                                                      Acabamos de crear tu casillero gratis en SHIPIT. Para <br>usarlo, tienes usar tu nuevo casillero de Shipit como tu<br>dirección de entrega para tus compras. 
+                                                   <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
+                                                      Acabamos de crear tu cuenta gratis en <b>Shipit!</b>.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px">
-                                                     Esta es tu nueva dirección de entrega en USA
+                                                     Esta es tu nueva dirección de entrega
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: center; font-size: 16px; color: #4F3356; font-weight: bold ">
+                                                      <?= $_REQUEST['usuario']; ?><br>                                                   </td>
+                                                </tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px; color: #F53C5D">
-                                                      <?= $_REQUEST['usuario']; ?>
-                                                      9900 N. Kendall Dr.<br>
-                                                      Apt K301<br>
-                                                      33176 Miami, Fl, USA<br>
+                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px; color: #F53C5D;padding: 0px 20px">
+                                                      <?= $_REQUEST['direccion']; ?> <br>                                                      
+                                                      <?= $_REQUEST['ciudad']; ?>
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 14px" >                                                   
-                                                      <a href="<?= $_REQUEST['urllogin']; ?>" style="
+                                                      <a href="<?= $_REQUEST['url']; ?>/ingresar" style="
                                                              font-size: 14px;
                                                              font-family: &quot;Work Sans&quot;, Sans-serif;
                                                              font-weight: 500;
@@ -426,62 +429,54 @@
 
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                  Uso de los servicios de Shipit Los servicios ofrecidos por Shipit pueden ser utilizados por cualquier persona que sea mayor de edad, empresas en general, fundaciones, ONG, instituciones educativas y/o instituciones en general. Para poder usar los servicios de Shipit, un casillero debe de ser obtenido por el cliente, el cual es gratis, y debe de compartir los datos personales solicitados por el staff de Shipit. Cabe destacar que al aperturar un casillero, el cliente acepta las políticas descritas de Shipit. Shipit se reserva el derecho de prestar los servicios a cualquiera de sus clientes. Shipit se compromete a compartir, por escrito, la información de las condiciones del servicio, con todos sus clientes.
+                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; text-align: left; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">
-                                                      Costos por servicios
+                                                   <td style=" border:none; text-align: center; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">                                                      
+                                                      <a href="<?= $_REQUEST['url'] ?>/precios" style="
+                                                             font-size: 13px;
+                                                             font-family: &quot;Work Sans&quot;, Sans-serif;
+                                                             font-weight: 500;
+                                                             letter-spacing: 1.3px;
+                                                             border-radius: 20px 20px 20px 20px;
+                                                             color: #FFF;
+                                                             background: #F53C5D;
+                                                             padding: 9px 25px;
+                                                             width: auto;
+                                                         ">Ver costos por servicio 
+                                                      </a>
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
-                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                <!--<tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
                                                    Shipit cobrará el servicio brindado a sus clientes cada vez que transporten su carga a través de su casillero asignado. El costo del envío se le compartirá al tener toda su carga consolidada y empacada, pesada y medida. Los costos adicionales al costo de envío se detallarán en la factura, siempre y cuando apliquen dichos costos adicionales. Ejemplos de costos adicionales incluyen, pero no están limitados a: Seguros, Impuestos Aduanales, Transporte terrestre nacional (HON), entre otros. Estos costos podrían ser modificados por Shipit en cualquier momento según sea necesario.
                                                    </td>
-                                                </tr>
+                                                </tr>-->
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: left; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">
-                                                      Responsabilidades de Shipit
+                                                      Responsabilidades de <b>Shipit!</b>
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                      En Shipit nos responsabilizamos por prestar un servicio de alta calidad a cada uno de nuestros clientes. Nos comprometemos a manejar adecuadamente todos los artículos de nuestros clientes y a informar constantemente sobre el estado de los envíos a través de los canales de comunicación oficiales de Shipit.
+                                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: left; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">
-                                                      Cabe destacar que Shipit no se responsabiliza por carga de clientes en las siguientes instancias:
+                                                      Cabe destacar que <b>Shipit!</b> no se responsabiliza por carga de clientes en las siguientes instancias:
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                      Carga que contiene cualquier tipo de electrónico, incluyendo teléfonos móviles.
-                                                      El (Los) artículo(s) aparecen como ENTREGADO en la bodega oficial de Shipit, según el número de rastreo, pero no ha sido entregado en dicha bodega y no existe registro de tal llegada.
-                                                      Cuando recibimos un artículo en nuestra bodega en USA en mal estado.
-                                                      Cuando el contenido de los paquetes cumple con una de las siguientes características:
-                                                      Es prohibida por los gobiernos de USA y/o HON
-                                                      Es un ítem perecedero y/o necesite refrigeración
-                                                      No es el que pidió o esperaba el cliente
-                                                      HN no se responsabiliza por atrasos, extravíos, daños o pérdidas de los artículos de nuestros clientes cuando la causa es externa, por causas de fuerza mayor o negligencia del cliente.
-                                                      Días de recepción de paquetes En Shipit recibimos paquetes de nuestros clientes en nuestra bodega oficial de lunes a sábado, entre 9:00 AM y 6:00 PM (GMT-5).
-                                                      Itinerarios de despacho Para los servicios aéreos de envío manejamos salidas entre miércoles y viernes de cada semana, con hora límite de recepción de paquete los martes a las 6:00 P.M., excepto en días feriado de USA.
-                                                      Para el servicio marítimo tenemos una salida los días martes y sábado, con día y hora límite de recepción de paquetes el miércoles a las 6:00 P.M.
-                                                      Tiempos de entrega
-                                                      En Shipit manejamos los siguientes tiempos estimados de entrega:
-                                                      Aéreo Courier = 10 días
-                                                      Aéreo Express = 6 días
-                                                      Aéreo Express Plus = 3 días
-                                                      Marítimo = 19 días
-                                                      Cabe destacar que los días empiezan a contar luego de ser despachada la carga de nuestra bodega oficial en USA. Los despachos se realizan los días viernes de cada semana, con el corte los días miércoles a las 6:00 P.M. Estos tiempos de entrega son estimados y pueden variar en cualquier momento dependiendo de condiciones climáticas, aduaneras, alto tráfico en puerto como temporadas festivas.
-                                                      Costo de envío terrestre nacional – HON
-                                                      Shipit le puede dar el servicio de hacerle llegar su carga a la puerta de su casa u oficina. Para esto, nosotros tercerizamos el servicio con las empresas de mayor reconocimiento en el país para manejo de carga y debemos cobrar un recargo terrestre para cubrir con los costos de transporte de nuestra bodega a su destino final. Este costo puede variar según el tamaño, peso y cantidad de paquetes que serán enviados.
+                                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 80px;">

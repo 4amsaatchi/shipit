@@ -118,7 +118,7 @@ function thewpchannel_elementor_form_create_new_user($record,$ajax_handler)
     $password = $form_data['password']; //Get the value of the input with the label "Password"
     $email=$form_data['email'];  //Get the value of the input with the label "Email"*/
     $telefono=$form_data['telefono'];
-    $dni=$form_data['dni'];
+    $dui=$form_data['dui'];
     $dir1=$form_data['dir1'];
     $dir2=$form_data['dir2'];
     $ciudad=$form_data['ciudad'];
@@ -134,15 +134,16 @@ function thewpchannel_elementor_form_create_new_user($record,$ajax_handler)
 
     $tuser = get_user_by('ID', $user);
     $nickname = get_user_meta($user, 'nickname', true);
-    $tuser->data->user_nicename = $tuser->data->user_nicename . $tuser->data->ID . "-" . "BOX" ;
-    $tuser->data->display_name = $tuser->data->user_nicename . "-" . $tuser->data->ID . "-" . "BOX" ;   
-    $nickname = $nickname . "-" . "BOX" . $user;
+    $prefijo = get_option("wpcargo_option_settings")["wpcargo_title_prefix"];
+    $tuser->data->user_nicename = $tuser->data->user_nicename . $tuser->data->ID . "-" .$prefijo;
+    $tuser->data->display_name = $tuser->data->user_nicename . "-" . $tuser->data->ID . "-" .$prefijo ;   
+    $nickname = $nickname . "-" .$prefijo. $user;
     
     wp_update_user($tuser->data);
     update_user_meta($user,"last_name", $nickname);
 
     update_user_meta( $user, 'telefono', $telefono );
-    update_user_meta( $user, 'dni', $dni );
+    update_user_meta( $user, 'dui', $dui );
     update_user_meta( $user, 'dir1', $dir1 );
     update_user_meta( $user, 'dir2', $dir2 );
     update_user_meta( $user, 'ciudad', $ciudad );
@@ -152,7 +153,7 @@ function thewpchannel_elementor_form_create_new_user($record,$ajax_handler)
     /*$email = "jescobar@4amsaatchi.com"*/;
     /*******************************************/
 
-    sendemailuseraccount($username, $nickname, $urllogin, $email);
+    sendemailuseraccount($username, $nickname, $urllogin, $email, $dir1, $ciudad);
 
 }
 
@@ -173,9 +174,9 @@ function extra_user_profile_fields( $user ) { ?>
         </td>
     </tr>
     <tr>
-        <th><label for="dni"><?php _e("Dni"); ?></label></th>
+        <th><label for="dui"><?php _e("DUI"); ?></label></th>
         <td>
-            <input type="text" name="dni" id="dni" value="<?php echo esc_attr( get_the_author_meta( 'dni', $user->ID ) ); ?>" class="regular-text" /><br />            
+            <input type="text" name="dui" id="dui" value="<?php echo esc_attr( get_the_author_meta( 'dui', $user->ID ) ); ?>" class="regular-text" /><br />            
         </td>
     </tr>
     <tr>
@@ -216,7 +217,8 @@ function save_extra_user_profile_fields( $user_id ) {
     update_user_meta( $user_id, 'postalcode', $_POST['postalcode'] );
 }*/
 
-function sendemailuseraccount($nombre, $usuario, $urllogin, $correo){
+function sendemailuseraccount($nombre, $usuario, $urllogin, $correo,$direccion, $ciudad){
+
 
         
 
@@ -232,7 +234,11 @@ function sendemailuseraccount($nombre, $usuario, $urllogin, $correo){
 
               "url" => site_url(),
 
-              "urlogin"=> $urllogin     
+              "urlogin"=> $urllogin,
+
+              "direccion"=>$direccion,
+
+              "ciudad"=>$ciudad
 
               )
 
@@ -271,3 +277,19 @@ add_action('wpcargo_tn_submit_val', function(){
 add_action('wpcargo_tn_placeholder', function(){
     return 'Ingrese el código de su paquete';
 });
+
+add_action('wpcargo_tn_print_results', function(){
+    return 'Detalle de envío';
+});
+
+/**
+ * Filter to redirect a user to default Register form.
+ *
+ * @return [URL] register url with page slug on which it will be redirected after logout
+*/
+add_filter( 'register_url', 'custom_register_url' );
+function custom_register_url( $register_url )
+{
+    $register_url = site_url( ).'/crear-cuenta';
+    return $register_url;
+}

@@ -380,11 +380,16 @@
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; text-align: center; font-size: 14px" >
-                                                      Acabamos de agregar un nuevo paquete a tu envio <span style="color: #F53C5D; font-weight: bold"><?= $_REQUEST['idorden']; ?></span>. <br>Puedes visualizarlo y/o consolidar el pedido en el siguiente enlace. 
-                                                   </td>
+                                                   <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
+                                                      Acabamos de agregar un nuevo paquete a tu envio <span style="color: #F53C5D; font-weight: bold"><?= $_REQUEST['idorden']; ?></span>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
+                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: center; font-size: 14px; font-weight: bold;padding: 0px 20px" >
+                                                      ¿Vas a esperar otro paquete o vas a consolidar el envío?
+                                                   </td>
+                                                </tr>
+                                                   
                                               
                                               
                                                
@@ -401,8 +406,14 @@
                                                              background: #F53C5D;
                                                              padding: 9px 27px;
                                                              width: auto;
-                                                         ">CONSOLIDAR PEDIDO
+                                                         ">CONSOLIDAR ENVÍO
                                                       </a>
+                                                   </td>
+                                                </tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
+                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
+                                                      Si estás esperando otro paquete antes de consolidar, recuerda notificarnos de su llegada.<br>Si no nos has notificado de que viene otro paquete, <a style="font-weight: bold;" href="<?= $_REQUEST['url']; ?>/notificaciones">puedes notificarlo aquí.</a> 
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 80px;">
@@ -411,6 +422,7 @@
                                                       
                                                    </td>
                                                 </tr>
+
 
                                                    
 

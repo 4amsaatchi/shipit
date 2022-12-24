@@ -373,14 +373,14 @@
                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px">
+                                                   <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px;padding: 0px 20px">
                                                       Hola <?= $_REQUEST['nombre']; ?>
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; text-align: center; font-size: 14px" >
+                                                   <td style=" border:none; text-align: center; font-size: 14px; padding: 0px 20px" >
                                                       El pedido <span style="color: #F53C5D; font-weight: bold"><?= $_REQUEST['idorden']; ?></span> ha sido consolidado. <br> tienes que cotizar y enviar link de pago al cliente. 
                                                    </td>
                                                 </tr>

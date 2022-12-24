@@ -1,0 +1,45 @@
+{
+    "name": "Shipit",
+    "short_name": "Shipit",
+    "description": "Shipit",
+    "icons": [
+        {
+            "src": "https:\/\/138.197.102.237\/shipit\/wp-content\/uploads\/2022\/02\/e45b13a1-3a11-4ed5-b963-1f78ea8f3797.webp",
+            "sizes": "192x192",
+            "type": "image\/png",
+            "purpose": "any"
+        },
+        {
+            "src": "https:\/\/138.197.102.237\/shipit\/wp-content\/uploads\/2022\/02\/e45b13a1-3a11-4ed5-b963-1f78ea8f3797.webp",
+            "sizes": "192x192",
+            "type": "image\/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https:\/\/138.197.102.237\/shipit\/wp-content\/uploads\/2022\/02\/e45b13a1-3a11-4ed5-b963-1f78ea8f3797.webp",
+            "sizes": "512x512",
+            "type": "image\/png",
+            "purpose": "any"
+        },
+        {
+            "src": "https:\/\/138.197.102.237\/shipit\/wp-content\/uploads\/2022\/02\/e45b13a1-3a11-4ed5-b963-1f78ea8f3797.webp",
+            "sizes": "512x512",
+            "type": "image\/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https:\/\/138.197.102.237\/shipit\/wp-content\/plugins\/pwa-for-wp\/images\/logo-512x512.png",
+            "sizes": "512x512",
+            "type": "image\/png",
+            "purpose": "maskable"
+        }
+    ],
+    "background_color": "#D5E0EB",
+    "theme_color": "#D5E0EB",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "https:\/\/138.197.102.237\/shipit\/",
+    "scope": "https:\/\/138.197.102.237\/shipit\/"
+}

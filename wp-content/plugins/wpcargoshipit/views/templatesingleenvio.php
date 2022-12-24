@@ -14,12 +14,11 @@ if (!$orden){
 }
 $estados = get_option("wpcargo_option_settings")["settings_shipment_status"];
 $estados = explode(",", $estados);
-unset($estados[2]); //Quitar pendiente de pago 
 $nestados = count($estados);
 $estadoactual = 	get_post_meta($norder, 'wpcargo_status', true);
 
 if ($estadoactual == get_estadoconsolidado()){
-	$estadoactual = get_estadoparaconsolidar();
+	/*$estadoactual = get_estadoparaconsolidar();*/
 }
 $estadoactivo = "estadoactivo";
 $cont = 1;
@@ -231,6 +230,7 @@ $cont = 1;
 	}
 
 	.estadospedido{
+		justify-content: center;
 		margin: 50px 0px;
 		display: inline-flex;
 		width: 100%;

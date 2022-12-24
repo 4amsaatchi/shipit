@@ -9,7 +9,7 @@
 						continue;
 					}
 					?>
-					<th><?php echo $value['label']; ?></th>
+					<th class="<?php echo $value['label']; ?>"><?php echo $value['label']; ?></th>
 				<?php endforeach; ?>
 			</tr>
 		</thead>
@@ -25,6 +25,7 @@
 						?>
 						<td class="package-data <?php echo wpcargo_to_slug($field_key); ?>">
 							<?php 
+
 								if ($field_key != "imagen_paquete"):
 								$package_data = array_key_exists( $field_key, $data_value ) ? $data_value[$field_key] : '' ;
 								echo is_array( $package_data ) ? implode(',', $package_data ) : $package_data; 
@@ -55,5 +56,9 @@
 	.wpcargo-table thead th {
 		    background-color: #f43c5c;
     		border-color: #f43c5c;
+	}
+
+	.factura ,.Factura {
+		display: none;
 	}
 </style>

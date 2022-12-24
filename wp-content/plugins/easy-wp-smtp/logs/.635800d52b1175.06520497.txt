@@ -166,3 +166,73 @@
 , To: julian515419@gmail.com, Subject: Shipit Tracking # JUL3483ESV - Volando a ESA
 [12/15/2022 9:54:49 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # JUL3483ESV
 [12/15/2022 9:55:15 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH8119ESV
+[12/19/2022 4:06:14 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/19/2022 4:06:16 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: insights@4ampeoplefirst.com, Subject: Cuenta Creada en Shipit
+[12/19/2022 4:47:44 PM] - Headers: , To: insights@4ampeoplefirst.com, Subject: [Shippit] Restablecer la contraseña
+[12/19/2022 4:50:43 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shippit] Contraseña cambiada
+[12/19/2022 4:51:29 PM] - Headers: , To: insights@4ampeoplefirst.com, Subject: [Shippit] Contraseña cambiada
+[12/19/2022 5:03:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: insights@4ampeoplefirst.com, Subject: Se ha agregado un nuevo paquete a tu envio SH9864ESV
+[12/19/2022 5:31:17 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[12/19/2022 5:31:18 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: insights@4ampeoplefirst.com, Subject: Su envio  ha sido consolidado 
+[12/19/2022 5:50:59 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: insights@4ampeoplefirst.com, Subject: Shipit Tracking # SH9864ESV - Volando a ESA
+[12/19/2022 5:51:00 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH9864ESV
+[12/19/2022 8:25:40 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH8119ESV - En Aduanas
+[12/19/2022 8:25:41 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH8119ESV
+[12/20/2022 2:57:22 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # JUL3483ESV - En Aduanas
+[12/20/2022 2:57:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # JUL3483ESV
+[12/20/2022 3:00:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # JUL3483ESV - En Shipit! ESA
+[12/20/2022 3:00:52 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # JUL3483ESV
+[12/20/2022 8:08:37 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/20/2022 8:08:38 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/20/2022 8:15:41 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[12/20/2022 8:15:42 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/20/2022 8:20:53 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/20/2022 8:23:08 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/20/2022 8:25:34 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Se ha agregado un nuevo paquete a tu envio SH5278ESV
+[12/20/2022 8:36:06 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío sh5278esv
+[12/20/2022 8:36:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Su envio sh5278esv ha sido consolidado 
+[12/20/2022 8:38:16 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian.escobar@ipalmera.co, Subject: Shipit Tracking # SH5278ESV - En Aduanas
+[12/20/2022 8:38:17 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH5278ESV
+[12/20/2022 8:42:02 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío sh5278esv
+[12/20/2022 8:42:03 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Su envio sh5278esv ha sido consolidado 
+[12/21/2022 4:17:41 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[12/21/2022 5:08:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH6436ESV
+[12/21/2022 5:08:54 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: aguitta@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH6719ESV
+[12/21/2022 8:27:23 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/21/2022 8:33:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/22/2022 2:12:54 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: , Subject: Shipit Tracking # SH6719ESV - Volando a ESA
+[12/22/2022 2:12:55 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH6719ESV
+[12/22/2022 5:42:56 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: aguitta@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH4567ESV
+[12/22/2022 5:49:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[12/22/2022 5:49:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: aguitta@gmail.com, Subject: Su envio  ha sido consolidado 
+[12/22/2022 6:07:38 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - En Aduanas
+[12/22/2022 6:07:39 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/22/2022 6:12:29 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - En Shipit! ESA
+[12/22/2022 6:12:30 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/22/2022 6:12:55 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - En reparto
+[12/22/2022 6:12:56 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/22/2022 6:13:36 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - Entregado
+[12/22/2022 6:13:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/22/2022 9:39:19 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - Volando a ESA
+[12/22/2022 9:39:20 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shippit <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/22/2022 9:51:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: aguitta@gmail.com, Subject: Shipit Tracking # SH4567ESV - En Aduanas
+[12/22/2022 9:51:52 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH4567ESV
+[12/23/2022 9:31:10 PM] - Headers: , To: insights@4ampeoplefirst.com, Subject: [Shipit!] Contraseña cambiada
+[12/23/2022 9:40:35 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <admin@138.197.102.237>, To: insights@4ampeoplefirst.com, Subject: Asignar notificación de envío [Agent]
+[12/23/2022 9:52:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[12/23/2022 9:52:25 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@4amsaatchi.com, Subject: Su envio  ha sido consolidado 
+[12/23/2022 9:57:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: insights@4ampeoplefirst.com, Subject: Shipit Tracking # SH9864ESV - Entregado
+[12/23/2022 9:57:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH9864ESV

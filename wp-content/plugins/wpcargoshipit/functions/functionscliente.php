@@ -5,7 +5,7 @@ function get_estadoparaconsolidar() {
 }
 
 function get_estadoconsolidado(){
-	return "Pendiente de pago";
+	return "Volando a ESA";
 }
 
 function getorderuser() {
