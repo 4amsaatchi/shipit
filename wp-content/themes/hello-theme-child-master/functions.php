@@ -140,7 +140,7 @@ function thewpchannel_elementor_form_create_new_user($record,$ajax_handler)
     $nickname = $nickname . "-" .$prefijo. $user;
     
     wp_update_user($tuser->data);
-    update_user_meta($user,"last_name", $nickname);
+    /*update_user_meta($user,"last_name", $nickname);*/
 
     update_user_meta( $user, 'telefono', $telefono );
     update_user_meta( $user, 'dui', $dui );
@@ -200,7 +200,7 @@ function extra_user_profile_fields( $user ) { ?>
     </table>
 <?php }
 
-/*
+
 add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
 
@@ -212,10 +212,12 @@ function save_extra_user_profile_fields( $user_id ) {
     if ( !current_user_can( 'edit_user', $user_id ) ) { 
         return false; 
     }
-    update_user_meta( $user_id, 'address', $_POST['address'] );
-    update_user_meta( $user_id, 'city', $_POST['city'] );
-    update_user_meta( $user_id, 'postalcode', $_POST['postalcode'] );
-}*/
+    update_user_meta( $user_id, 'telefono', $_POST['telefono'] );
+    update_user_meta( $user_id, 'dui', $_POST['dui'] );
+    update_user_meta( $user_id, 'dir1', $_POST['dir1'] );
+    update_user_meta( $user_id, 'dir2', $_POST['dir2'] );
+    update_user_meta( $user_id, 'ciudad', $_POST['ciudad'] );
+}
 
 function sendemailuseraccount($nombre, $usuario, $urllogin, $correo,$direccion, $ciudad){
 
@@ -293,3 +295,111 @@ function custom_register_url( $register_url )
     $register_url = site_url( ).'/crear-cuenta';
     return $register_url;
 }
+
+
+
+add_filter( 'wpcargo_print_invoice_label', 'wpcargo_print_invoice_labelv2', 10);
+   
+function wpcargo_print_invoice_labelv2( $no_via ) {
+    return "Detalle de envío";
+}
+
+
+add_filter( 'wpcargo_track_shipment_status_result_title', 'wpcargo_track_shipment_status_result_titlev2', 10);
+   
+function wpcargo_track_shipment_status_result_titlev2( $no_via ) {
+    return "Estado envío: ";
+}
+
+
+
+function wptips_has_user_role($check_role){
+    $user = wp_get_current_user();
+    if(in_array( $check_role, (array) $user->roles )){
+        return true;
+    }
+    return false;
+}
+
+function hide_siteadmin() {
+
+$adm = get_role('cargo_agent');
+ $adm_cap= array_keys( $adm->capabilities );
+
+
+  if (wptips_has_user_role('wpcargo_employee')) {
+
+     /* DASHBOARD */
+      remove_menu_page( 'options-general.php', );  // Update
+      remove_menu_page( 'pwaforwp');
+      remove_menu_page( 'eael-settings');
+      remove_menu_page( 'elementor');
+      remove_menu_page( 'jetpack');
+      remove_menu_page( 'revslider');
+      remove_menu_page( 'wpuf-post-forms');
+      $contributor = get_role('wpcargo_employee');
+      /*$contributor->add_cap('upload_files');
+      $contributor->add_cap('cargo_agent');
+      $contributor->add_cap('create_posts');*/
+
+        $new_role = get_role('wpcargo_employee');
+
+      foreach ( $adm_cap as $cap ) {
+            $new_role->add_cap( $cap ); //clone administrator capabilities to new role
+        }
+      
+
+      
+  }
+}
+add_action('admin_head', 'hide_siteadmin');
+
+add_filter('ure_attachments_show_full_list', 'show_attachments_full_list', 10, 1);
+
+function show_attachments_full_list($show_full_list) {
+    return true;
+}
+
+function rnz_elementor_get_field( $id, $record )
+{
+    $fields = $record->get_field( [
+        'id' => $id,
+    ] );
+
+    if ( empty( $fields ) ) {
+        return false;
+    }
+
+    return current( $fields );
+}
+
+
+add_action( 'elementor_pro/forms/validation', 'itchycode_restrict_maximum_entries', 10, 2);
+
+function itchycode_restrict_maximum_entries( $record, $ajax_handler ) { 
+
+    // target my form
+    $target_form_id = '2740eab';
+
+    if( $target_form_id != $record->get_form_settings('id') ) return;
+
+    // Here is the target form, let's make some logic
+    // use $ajax_handler->add_error( $field_id, $message) when you want to fail the submission.
+
+    /*$ajax_handler->add_error( 'form-field-email', 'You must accept the policies to submit the form.'.rnz_elementor_get_field( 'field_0ed7712', $record)  );*/
+    if( $field = rnz_elementor_get_field( 'field_0ed7712', $record ) )
+    {   
+        $password =  trim($field['value']);
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number    = preg_match('@[0-9]@', $password);
+        $specialChars = preg_match('/([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/', $password);
+        //$specialChars = preg_match('/[^a-zA-Z\d]/', $string);
+
+        if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {            
+            $ajax_handler->add_error( 'field_0ed7712', 'La contraseña debe tener al menos 8 caracteres y debe incluir al menos una letra mayúscula, un número y un carácter especial.' );
+        }
+    }
+
+    
+};

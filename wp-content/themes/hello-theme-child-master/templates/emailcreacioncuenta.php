@@ -387,19 +387,19 @@
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px">
-                                                     Esta es tu nueva dirección de entrega
+                                                     Esta es tu nueva dirección de entrega en USA
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 16px; color: #4F3356; font-weight: bold ">
-                                                      <?= $_REQUEST['usuario']; ?><br>                                                   </td>
+                                                      <?= $_REQUEST['nombre']; ?><br>                                                   </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; font-weight: bold; text-align: center; font-size: 14px; color: #F53C5D;padding: 0px 20px">
-                                                      <?= $_REQUEST['direccion']; ?> <br>                                                      
-                                                      <?= $_REQUEST['ciudad']; ?>
+                                                      1460 NW 107TH AVE SUITE R<br>
+                                                      33172 Miami, Fl, USA
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
@@ -429,10 +429,10 @@
 
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
+                                                  Ship It S.A. de C.V. es una empresa en El Salvador que brinda a sus clientes, los servicios de casillero, recepción, etiquetado, clasificación, transporte, declaración aduanal, pago de impuestos, entrega de productos y envíos hasta su destino, de todas las compras en línea realizadas en USA. Se facilita al cliente la tecnología necesaria, sistemas, aplicaciones y soluciones de forma que el proceso de compra sea agradable y simple. Se requiere para suscribir este documento ser mayor de edad con documento de identificación (DUI) vigente. 
                                                    </td>
                                                 </tr>
-                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;"></tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">                                                      
                                                       <a href="<?= $_REQUEST['url'] ?>/precios" style="
@@ -458,25 +458,38 @@
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: left; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">
-                                                      Responsabilidades de <b>Shipit!</b>
+                                                      Instancias en donde no nos hacemos responsables
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
+                                                      <b>ShipIt!</b> no se adjudica ninguna responsabilidad sobre aquellas desviaciones en el servicio provocadas por las siguientes instancias que salen totalmente de su propio control:
                                                    </td>
                                                 </tr>
-                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 20px;">
+                                               
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
-                                                   <td style=" border:none; text-align: left; font-size: 15px; color: #4F3356; font-weight: bold;  padding: 0px 30px">
-                                                      Cabe destacar que <b>Shipit!</b> no se responsabiliza por carga de clientes en las siguientes instancias:
+                                                   <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
+                                                         <b style="color: #4F3356; margin-right:5px">1.</b> Eventos climáticos que interrumpan rutas, puertos, aeropuertos, accesos, terminales de carga.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
-                                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper ac metus vel pulvinar. Nullam hendrerit, felis quis pharetra accumsan, risus massa aliquam orci, aliquam pretium odio magna suscipit nunc. Phasellus id feugiat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibu.
+                                                         <b style="color: #4F3356; margin-right:5px">2.</b> Huelgas o paros de transporte.
+                                                   </td>
+                                                </tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;"></tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
+                                                         <b style="color: #4F3356; margin-right:5px">3.</b>    Cambio de condiciones fiscales, legales o regulatorias en las legislaciones de los países de origen, destino o tránsito.
+                                                   </td>
+                                                </tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;"></tr>
+                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: justify; font-size: 14px; color: #000; padding: 0px 30px">
+                                                         <b style="color: #4F3356; margin-right:5px">4.</b> Otras causas de fuerza mayor.
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 80px;">

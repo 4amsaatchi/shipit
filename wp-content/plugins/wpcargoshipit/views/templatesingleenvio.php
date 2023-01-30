@@ -17,8 +17,8 @@ $estados = explode(",", $estados);
 $nestados = count($estados);
 $estadoactual = 	get_post_meta($norder, 'wpcargo_status', true);
 
-if ($estadoactual == get_estadoconsolidado()){
-	/*$estadoactual = get_estadoparaconsolidar();*/
+if ($estadoactual == "Envío consolidado"){
+	$estadoactual = get_estadoparaconsolidar();
 }
 $estadoactivo = "estadoactivo";
 $cont = 1;
@@ -70,7 +70,9 @@ $cont = 1;
 			foreach ($paquetes as $paquete): ?>
 				<div class="singlepaquete">
 					<div class="colimg">
-						<img src="">	
+						
+						<?php if ($paquete["imagen_paquete"] != "")?>
+						<img src='<?= wp_get_attachment_image_src($paquete["imagen_paquete"])[0]; ?>'>	
 					</div>
 					<div class="content">
 						<h5>Envío <?= $cont; ?></h5>
@@ -103,6 +105,17 @@ $cont = 1;
 		<?php $historial = get_post_meta($norder, 'wpcargo_shipments_update', true); ?>
 		<?php if ($historial): ?>
 		<h2>¿En dónde está tu pedido?</h2>
+
+		<?php 
+			/*	Ordernar por fecha */
+
+		  foreach ($historial as $key => $part) {
+       			$sort[$key] = strtotime($part['date'].$part['time']);
+  			}
+  			array_multisort($sort, SORT_DESC, $historial);
+
+		?>
+
 		<div class="tablaenvios">
 			<div class="cabecera rowenvios">
 				   <div>Estado</div>

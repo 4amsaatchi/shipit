@@ -90,20 +90,33 @@ function botonconsolidareemail($idenvio){
 
 // I'm using an anonymous function for brevity.
 add_action( 'admin_enqueue_scripts', function() {
-    wp_enqueue_script( 'handle', get_stylesheet_directory_uri(). '/customadmin.js?v=bv2v' );
+    wp_enqueue_script( 'handle', get_stylesheet_directory_uri(). '/customadmin.js?v=baa44159s43' );
 } );
 
 // Ajax action to refresh the user image
 add_action( 'wp_ajax_myprefix_get_image', 'myprefix_get_image'   );
 function myprefix_get_image() {
     if(isset($_GET['id']) ){
+    	$tipo = "imagen";
         $image = wp_get_attachment_image( filter_input( INPUT_GET, 'id', FILTER_VALIDATE_INT ), 'medium', false, array( 'id' => 'preview'.$_GET['campo'] ) );
+        if (!$image){
+        	$image = wp_get_attachment_url($_GET['id']);
+        	$tipo = "pdf";
+        }
+        if (isset($_GET['tipoimg']) == "urlimagen"){
+        	$image = wp_get_attachment_url($_GET['id']);
+        	$tipo = "pdf";
+        }
         $data = array(
             'image'    => $image,
+            'tipo'     => $tipo
         );
+
+
         wp_send_json_success( $data );
+        
     } else {
-        wp_send_json_error();
+        wp_send_json_error("ERROR");
     }
 }
 
@@ -179,9 +192,11 @@ add_action('admin_menu','menu_preentregas');
 function menu_preentregas() {
 	
 	//this is the main item for the menu
-	add_menu_page('Pre-entregas', //page title
-	'Pre-entregas', //menu title
-	'manage_options', //capabilities
+	add_menu_page('Notificaciones', //page title
+	'Notificaciones', //menu title
+	/*array('cargo_agent','wpcargo_employee'), //capabilities
+	//'read',*/
+	'manage_options',
 	'get_listado_preentregas', //menu slug
 	'get_listado_preentregas' //function
 	);
@@ -254,3 +269,66 @@ function so_save_metabox(){
 
 add_action( 'add_meta_boxes', 'wpt_add_event_metaboxes' );
 add_action('save_post', 'so_save_metabox');
+
+function wpt_add_event_metaboxes2() {
+	add_meta_box(
+		'infoclientepedido',
+		'Información de Contacto del Cliente',
+		'infoclientepedido',
+		'wpcargo_shipment',
+		'normal',
+		'0'
+	);
+}
+
+
+
+function infoclientepedido(){
+	global $post;
+    $idcliente = get_post_meta($post->ID, 'registered_shipper', true);
+    $clientepedido = get_user_by( 'id', $idcliente ); 
+    ?>   
+    
+    
+    <div class="rowcli">
+    	<label> Nombre </label>
+    	<span> <?= $clientepedido->nickname; ?> </span>	
+    </div>
+    <div class="rowcli">
+    	<label> Teléfono</label>
+    	<span> <?= get_user_meta($idcliente, "telefono")[0]; ?> </span>	
+    </div>
+      <div class="rowcli">
+    	<label> Email </label>
+    	<span> <?= $clientepedido->user_email; ?> </span>	
+    </div>
+     <div class="rowcli">
+    	<label> Dirección 1 </label>
+    	<span> <?= get_user_meta($idcliente, "dir1")[0]; ?> </span>	
+    </div>
+     <div class="rowcli">
+    	<label> Dirección 2 </label>
+    	<span> <?= get_user_meta($idcliente, "dir2")[0]; ?> </span>	
+    </div>
+     <div class="rowcli">
+    	<label> Ciudad</label>
+    	<span> <?= get_user_meta($idcliente, "ciudad")[0]; ?> </span>	
+    </div>
+    <style type="text/css">
+    	.rowcli {
+    		display: flex;
+    		width: 100%;
+    	}
+
+    	.rowcli label {
+    		font-weight: bold;
+    		width: 100px;
+    	}
+    </style>
+    
+    
+    <?php
+}
+
+add_action( 'add_meta_boxes', 'wpt_add_event_metaboxes2' );
+?>

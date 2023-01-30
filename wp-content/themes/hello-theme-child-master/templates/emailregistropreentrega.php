@@ -413,7 +413,13 @@
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 30px;">
                                                  <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
-                                                      Si estás esperando otro paquete antes de consolidar, recuerda notificarnos de su llegada.<br>Si no nos has notificado de que viene otro paquete, <a style="font-weight: bold;" href="<?= $_REQUEST['url']; ?>/notificaciones">puedes notificarlo aquí.</a> 
+                                                      Si estás esperando otro paquete antes de consolidar, recuerda notificarnos <br> de su llegada, compartiendo factura y número de tracking.</a> 
+                                                   </td>
+                                                </tr>
+                                                <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;"></tr>
+                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
+                                                   <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
+                                                      Si no nos has notificado de que viene otro paquete, <a style="font-weight: bold;" href="<?= $_REQUEST['url']; ?>/notificaciones">puedes notificarlo aquí.</a> 
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 80px;">

@@ -381,13 +381,13 @@
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px;" >
-                                                      Tus paquetes están siendo consolidados para tu envío <span style="color: #F53C5D; font-weight: bold"><?= $_REQUEST['idorden']; ?></span>. 
+                                                      Tus paquetes están siendo consolidados para tu envío
                                                    </td>
                                                 </tr>
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px; height: 10px;">
                                                 <tr style="border: 1px solid #F53C5D; background: #FFF;    border-top: 0px; border-bottom: 0px;">
                                                    <td style=" border:none; text-align: center; font-size: 14px;padding: 0px 20px" >
-                                                      Te mantendremos informado de los movimientos del paquete, puedes revisar<br> su estado ingresando el <b>código de rastreo <a style="color: #F53C5D;" href="<?= $_REQUEST['url']; ?>/tracking" >aquí</a></b>. 
+                                                      Te mantendremos informado del estado del paquete, puedes revisarlo<br> ingresando el <b>código de rastreo</b> <a style="color: #F53C5D; font-weight: bold" href="<?= $_REQUEST['urltracking']; ?>" >aquí</a></b>. 
                                                    </td>
                                                 </tr>
                                               

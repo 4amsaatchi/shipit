@@ -9,6 +9,12 @@
 
 
 $postid= 2249;
+
+/*$image = wp_get_attachment_image(2698)*/;
+$image = wp_get_attachment_url(2698);
+
+print_r($image);
+die();
  get_post_meta($postid, 'wpcargo_status', true)."<br>";
  $agente = get_post_meta($postid, 'agent_fields', true)."<br>";
   get_post_meta($postid, 'post_name', true)."<br>";

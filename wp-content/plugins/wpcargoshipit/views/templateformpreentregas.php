@@ -14,13 +14,13 @@
 
 <form id="formpreentregas" action="" method="post" enctype="multipart/form-data">
 	<div class="rowform">
-		<input type="text" name="tienda" placeholder="Tienda" required>
+		<input type="text" name="tienda" placeholder="Tienda*" required>
 	</div>
 	<div class="rowform">
-		<input type="text" name="nombre" placeholder="Nombre paquete" required>
+		<input type="text" name="nombre" placeholder="Descripción paquete*" required>
 	</div>
 	<div class="rowform">
-		<input type="text" name="trackingid" placeholder="No. Tracking" required>
+		<input type="text" name="trackingid" placeholder="No. Tracking*" required>
 	</div>
 	<div class="rowform">		
 		<div class="file-select" id="src-file1" >
@@ -29,10 +29,10 @@
 		<!--<input type="file" name="factura" placeholder="Factura o soporte" required>-->
 	</div>
 	<div class="rowform">		
-		<input type="datepicker" name="datepicker" id="datepicker" placeholder="Fecha estimada de ingreso" required>
+		<input type="datepicker" name="datepicker" id="datepicker" placeholder="Fecha estimada de ingreso*" required>
 		<input type="hidden" name="action" value="registrar_preentrega">
 		
-
+		<p style="font-size: 10px; margin-top: 30px;">Los campos marcados con <span style="color: red;">*</span> son obligatorios</p>
 	</div>
 
 	<input class="btnshipit" type="submit" value="ENVIAR" id="btnsubmit">
@@ -72,7 +72,7 @@
 }
 
 #src-file1::before {
-  content: 'ADJUNTAR FACTURA PDF O JPG';
+  content: 'ADJUNTAR FACTURA PDF O JPG *';
 }
 
 	.rowform {

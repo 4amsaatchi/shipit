@@ -5,7 +5,7 @@ function get_estadoparaconsolidar() {
 }
 
 function get_estadoconsolidado(){
-	return "Volando a ESA";
+	return "Envío consolidado";
 }
 
 function getorderuser() {
@@ -83,7 +83,7 @@ function consolidarpedido() {
 	endif;
 
 
-	enviarcorreoconsolidadocliente($cliente, $nombrepedido);
+	enviarcorreoconsolidadocliente($cliente, $idorder);
 
 	
 	echo json_encode(array("result"=>$result));
@@ -98,6 +98,7 @@ add_action( 'wp_ajax_consolidarpedido', 'consolidarpedido' );
 function enviarcorreoconsolidadoagente($agente, $nombrepedido,$urlenvio){
   $user = get_user_by( 'id', intval($agente) );  
   $nombre = $tuser->user_nicename;
+  $nombrepedido = strtoupper($nombrepedido);
 	
  $headers = array('Content-Type: text/html; charset=UTF-8');     
 
@@ -133,17 +134,19 @@ function enviarcorreoconsolidadoagente($agente, $nombrepedido,$urlenvio){
       $context  = stream_context_create($opts);      
 
       $html = file_get_contents(get_stylesheet_directory_uri()."/templates/emailenvioconsolidadoagente.php", false, $context); 
+      
+      $headers[]= "Bcc: <".get_bloginfo('admin_email').">";
 
       $envio= wp_mail( $user->user_email, "Se ha consolidado el envío ".$nombrepedido, $html, $headers );
 
       return $envio;
 }
 
-function enviarcorreoconsolidadocliente($cliente, $nombrepedido){
+function enviarcorreoconsolidadocliente($cliente, $trackinid){
 	$tuser = get_user_by('ID', $cliente);	
   $nombre = get_user_meta( $cliente, 'first_name', true );;
   $correo = $tuser->user_email;
-
+	$urltracking = site_url()."/envio?idenvio=".$trackinid;
   
 	 $headers = array('Content-Type: text/html; charset=UTF-8');     
 
@@ -153,7 +156,7 @@ function enviarcorreoconsolidadocliente($cliente, $nombrepedido){
 
               'nombre' => $nombre,
 
-              'idorden'   => $nombrepedido,               
+              'urltracking'   => $urltracking,               
 
               "url" => site_url()
 
@@ -267,7 +270,7 @@ function asignarapedido() {
 		$info = array('post_type'=>'wpcargo_shipment', 'post_title'=>$title, 'post_status' => 'publish');
 		$orderid = wp_insert_post($info);
 		if ($orderid != 0){
-		update_post_meta($orderid, 'wpcargo_status', 'En Shipit! Miami');
+		update_post_meta($orderid, 'wpcargo_status', get_estadoparaconsolidar());
 		update_post_meta($orderid, 'registered_shipper', $iduser);
 		add_post_meta($orderid, 'wpc-multiple-package', "");
 		agregarpaquete($orderid, $idpaquete);		

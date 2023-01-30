@@ -1,4 +1,4 @@
-<h1 id="titpre">Pre-entregas</h1>
+<h1 id="titpre">Notificaciones</h1>
 
 <div id="listadopreentregas">
 	
@@ -170,3 +170,31 @@ wp_reset_query();
 	   	});
 
 </script>
+<?php 
+/*
+$out = '<style>
+.flex-columns {
+    column-count: 4;
+    column-gap: 3em;
+    column-rule: 1px solid #000;
+}        
+</style>';
+    $out .= '<p class="flex-columns">';
+    $users = get_users();
+    foreach ( $users as $user ) {
+    	//wpcargo_employee
+        if ( $user->caps['cargo_agent'] ) {
+            $allcaps = array_keys( $user->allcaps );
+            print_r($allcaps);
+            foreach ( $allcaps as $cap ) {
+                $out .= $cap . '<br>';
+            }
+            $out .= '</p>';
+     echo $out;
+        }
+    }
+
+$admin_role_set = get_role( 'cargo_agent' )->capabilities;
+
+print_r($admin_role_set);*/
+?>

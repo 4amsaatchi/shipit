@@ -83,7 +83,7 @@ class WPCargo_Metabox {
 			array( $this, 'wpc_sh_metabox_callback' ),
 			'wpcargo_shipment'
 		);
-		if ( $current_user->roles[0] == 'administrator' || $current_user->roles[0] == 'wpcargo_employee' ) {
+		if ( in_array( 'administrator', (array) $current_user->roles )  ||  in_array( 'wpcargo_employee', (array) $current_user->roles ) ) {
 			add_meta_box(
 				'wpcargo_shipment_designation',
 				apply_filters( 'wpc_shipment_history_header', esc_html__( 'Assign shipment to', 'wpcargo' ) ),

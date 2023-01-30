@@ -236,3 +236,203 @@
 [12/23/2022 9:57:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
 , To: insights@4ampeoplefirst.com, Subject: Shipit Tracking # SH9864ESV - Entregado
 [12/23/2022 9:57:04 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH9864ESV
+[12/28/2022 9:19:34 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/28/2022 9:28:59 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Se ha agregado un nuevo paquete a tu envio SH6470ESV
+[12/28/2022 9:32:04 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[12/28/2022 9:32:05 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Su envio  ha sido consolidado 
+[12/28/2022 9:38:59 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío sh6470esv
+[12/28/2022 9:39:00 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Su envio sh6470esv ha sido consolidado 
+[12/28/2022 9:40:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian.escobar@ipalmera.co, Subject: Shipit Tracking # SH6470ESV - En Aduanas
+[12/28/2022 9:40:16 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH6470ESV
+[12/28/2022 9:41:05 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian.escobar@ipalmera.co, Subject: Shipit Tracking # SH6470ESV - En reparto
+[12/28/2022 9:41:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH6470ESV
+[12/28/2022 9:41:48 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian.escobar@ipalmera.co, Subject: Shipit Tracking # SH6470ESV - Entregado
+[12/28/2022 9:41:49 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH6470ESV
+[12/29/2022 8:58:38 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[12/29/2022 9:04:49 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Se ha agregado un nuevo paquete a tu envio SH6040ESV
+[12/29/2022 9:08:51 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Registro de nuevo usuario
+[12/29/2022 9:08:52 PM] - Headers: , To: pruebas@gmail.com, Subject: [Shipit!] Datos de acceso
+[12/29/2022 9:10:36 PM] - Headers: , To: pruebas@gmail.com, Subject: [Shipit!] Cambiado el correo electrónico
+[12/29/2022 10:51:11 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: aguitta@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5182ESV
+[01/04/2023 5:16:07 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Registro de nuevo usuario
+[01/04/2023 5:16:08 PM] - Headers: , To: julian.escobar@ipalmera.co, Subject: [Shipit!] Datos de acceso
+[01/04/2023 8:40:57 PM] - Headers: , To: admin@aguitta.com, Subject: [Shipit!] Restablecer la contraseña
+[01/04/2023 8:41:20 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[01/04/2023 8:42:29 PM] - Headers: , To: jcramirez@4amsaatchi.com, Subject: [Shipit!] Restablecer la contraseña
+[01/04/2023 8:43:53 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/04/2023 8:44:42 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/04/2023 8:47:53 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jospina@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[01/04/2023 8:54:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jospina@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH7370ESV
+[01/04/2023 8:54:59 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jcramirez@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH4690ESV
+[01/04/2023 8:55:09 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH1503ESV
+[01/04/2023 8:58:04 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[01/04/2023 8:58:04 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Su envio  ha sido consolidado 
+[01/04/2023 8:58:55 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[01/04/2023 8:58:56 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jospina@4amsaatchi.com, Subject: Su envio  ha sido consolidado 
+[01/04/2023 9:01:44 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <admin@138.197.102.237>, To: admin@aguitta.com, Subject: Asignar notificación de envío [Agent]
+[01/04/2023 9:03:28 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <admin@138.197.102.237>, To: admin@aguitta.com, Subject: Asignar notificación de envío [Agent]
+[01/04/2023 9:10:17 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH1503ESV - En Aduanas
+[01/04/2023 9:10:17 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH1503ESV
+[01/04/2023 9:13:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH1503ESV - En Shipit! ES
+[01/04/2023 9:13:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH1503ESV
+[01/04/2023 9:13:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH1503ESV - En reparto
+[01/04/2023 9:13:52 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH1503ESV
+[01/04/2023 9:15:56 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH1503ESV - Entregado
+[01/04/2023 9:15:57 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH1503ESV
+[01/04/2023 9:22:09 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH7370ESV - En Aduanas
+[01/04/2023 9:22:10 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH7370ESV
+[01/04/2023 9:23:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH7370ESV - En Shipit! ES
+[01/04/2023 9:23:16 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH7370ESV
+[01/04/2023 9:25:18 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH7370ESV - En reparto
+[01/04/2023 9:25:19 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH7370ESV
+[01/04/2023 9:25:57 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH7370ESV - Entregado
+[01/04/2023 9:25:58 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH7370ESV
+[01/04/2023 9:29:29 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <admin@138.197.102.237>, To: admin@aguitta.com, Subject: Asignar notificación de envío [Agent]
+[01/04/2023 9:29:30 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <admin@138.197.102.237>, To: jospina@4amsaatchi.com, Subject: Asignar notificación de envío [Client]
+[01/04/2023 9:30:10 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH0737ESV - En Aduanas
+[01/04/2023 9:30:11 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH0737ESV
+[01/04/2023 9:30:54 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH0737ESV - En Shipit! ES
+[01/04/2023 9:30:55 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH0737ESV
+[01/04/2023 9:33:14 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH0737ESV - En reparto
+[01/04/2023 9:33:15 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH0737ESV
+[01/04/2023 9:33:33 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: jospina@4amsaatchi.com, Subject: Shipit Tracking # SH0737ESV - Entregado
+[01/04/2023 9:33:34 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <admin@138.197.102.237>, To: admin@138.197.102.237, Subject: Shipment Notification # SH0737ESV
+[01/05/2023 3:01:21 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH8119ESV - En Shipit! ES
+[01/05/2023 3:01:22 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH8119ESV
+[01/05/2023 3:07:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH8119ESV - En reparto
+[01/05/2023 3:07:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH8119ESV
+[01/05/2023 3:25:39 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH8134ESV
+[01/05/2023 3:26:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[01/05/2023 3:26:44 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/05/2023 4:10:46 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Tu sitio tiene problemas técnicos
+[01/05/2023 10:22:54 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: insights@4ampeoplefirst.com, Subject: Asignar notificación de envío [Agent]
+[01/06/2023 3:34:49 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH8134ESV - Compra realizada
+[01/06/2023 3:34:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH8134ESV
+[01/06/2023 8:40:24 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH9010ESV
+[01/06/2023 9:02:58 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH9010ESV
+[01/06/2023 9:08:01 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío sh9010esv
+[01/06/2023 9:08:02 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 9:23:47 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En Shipit! Miami
+[01/06/2023 9:23:49 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:24:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío SH9010ESV
+[01/06/2023 9:24:07 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 9:30:05 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En Shipit! Miami
+[01/06/2023 9:30:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:30:42 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío SH9010ESV
+[01/06/2023 9:30:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 9:32:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En Transito a ES
+[01/06/2023 9:32:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:35:10 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En Aduanas
+[01/06/2023 9:35:11 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:35:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En Shipit! ES
+[01/06/2023 9:35:25 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:35:47 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - En reparto
+[01/06/2023 9:35:47 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:36:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH9010ESV - Entregado
+[01/06/2023 9:36:09 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH9010ESV
+[01/06/2023 9:56:52 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH4870ESV
+[01/06/2023 9:58:11 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[01/06/2023 9:58:13 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 9:59:56 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH4870ESV - En Shipit! Miami
+[01/06/2023 9:59:57 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH4870ESV
+[01/06/2023 10:00:09 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío SH4870ESV
+[01/06/2023 10:00:10 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 10:06:43 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH4870ESV - En Transito a ES
+[01/06/2023 10:06:44 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH4870ESV
+[01/06/2023 10:07:41 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH4870ESV - En Aduanas
+[01/06/2023 10:07:43 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH4870ESV
+[01/06/2023 10:08:23 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH4870ESV - En Shipit! ES
+[01/06/2023 10:08:25 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH4870ESV
+[01/06/2023 10:25:18 PM] - Headers: , To: julian.escobar@ipalmera.co, Subject: [Shipit!] Cambiado el correo electrónico
+[01/06/2023 10:31:41 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[01/06/2023 10:41:22 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5521ESV
+[01/06/2023 10:44:32 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5521ESV
+[01/06/2023 10:46:49 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[01/06/2023 10:46:51 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Su envio  ha sido consolidado 
+[01/06/2023 10:51:59 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH5521ESV - En Transito a ES
+[01/06/2023 10:52:01 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH5521ESV
+[01/06/2023 10:54:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH5521ESV - En Aduanas
+[01/06/2023 10:54:24 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH5521ESV
+[01/06/2023 10:54:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH5521ESV - En Shipit! ES
+[01/06/2023 10:54:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH5521ESV
+[01/06/2023 10:54:52 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH5521ESV - En reparto
+[01/06/2023 10:54:53 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH5521ESV
+[01/06/2023 10:55:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: julian515419@gmail.com, Subject: Shipit Tracking # SH5521ESV - Entregado
+[01/06/2023 10:55:08 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Shipment Notification # SH5521ESV
+[01/06/2023 11:02:40 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Registro de nuevo usuario
+[01/06/2023 11:02:41 PM] - Headers: , To: clopez@shipitsv.com, Subject: [Shipit!] Datos de acceso
+[01/06/2023 11:08:08 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian.escobar@ipalmera.co, Subject: Cuenta Creada en Shipit
+[01/06/2023 11:09:51 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/11/2023 4:24:00 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: insights@4ampeoplefirst.com, Subject: Asignar notificación de envío [Agent]
+[01/12/2023 8:37:41 PM] - Headers: , To: clopez@shipitsv.com, Subject: [Shipit!] Restablecer la contraseña
+[01/12/2023 8:38:48 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/12/2023 10:20:24 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: Nuevo mensaje desde «Shippit»
+[01/12/2023 10:33:11 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: kti92_celm@hotmail.com, Subject: Cuenta Creada en Shipit
+[01/13/2023 12:16:37 AM] - Headers: , To: clopez@shipitsv.com, Subject: [Shipit!] Restablecer la contraseña
+[01/13/2023 12:17:13 AM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/13/2023 12:54:10 AM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Registro de nuevo usuario
+[01/13/2023 12:54:11 AM] - Headers: , To: kaquino@shipitsv.com, Subject: [Shipit!] Datos de acceso
+[01/14/2023 12:05:20 AM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[01/14/2023 12:23:47 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: , Subject: Shipit Tracking # SH0694ESV - Compra realizada
+[01/14/2023 12:23:48 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0694ESV
+[01/14/2023 12:35:42 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: kti92_celm@hotmail.com, Subject: Shipit Tracking # SH0694ESV - En Shipit! Miami
+[01/14/2023 12:35:43 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0694ESV
+[01/14/2023 12:44:54 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: kti92_celm@hotmail.com, Subject: Shipit Tracking # SH0694ESV - En Transito a ES
+[01/14/2023 12:44:55 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0694ESV
+[01/14/2023 12:46:12 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: kti92_celm@hotmail.com, Subject: Shipit Tracking # SH0694ESV - En Aduanas
+[01/14/2023 12:46:13 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0694ESV
+[01/14/2023 12:46:55 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: kti92_celm@hotmail.com, Subject: Shipit Tracking # SH0694ESV - En Shipit! ES
+[01/14/2023 12:46:55 AM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0694ESV
+[01/16/2023 6:21:37 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: insights@4ampeoplefirst.com, Subject: Asignar notificación de envío [Employee]
+[01/16/2023 6:21:38 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: admin@aguitta.com, Subject: Asignar notificación de envío [Agent]
+[01/16/2023 6:21:39 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: carriaga@4amsaatchi.com, Subject: Asignar notificación de envío [Client]
+[01/16/2023 6:21:40 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH0886ESV - En Shipit! Miami
+[01/16/2023 6:21:41 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0886ESV
+[01/17/2023 3:28:06 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: carriaga@4amsaatchi.com, Subject: Shipit Tracking # SH0886ESV - Entregado
+[01/17/2023 3:28:07 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, clopez@shipitsv.com, Subject: Notificación cambio de estado pedido # SH0886ESV
+[01/17/2023 6:03:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: correodreprueba@gmail.com.co, Subject: Cuenta Creada en Shipit
+[01/17/2023 6:05:02 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH8195ESV
+[01/17/2023 6:08:23 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Tu sitio tiene problemas técnicos
+[01/20/2023 11:25:25 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: aguitta@gmail.com, Subject: Cuenta Creada en Shipit
+[01/20/2023 11:44:44 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: kti92_celm@hotmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH9074ESV
