@@ -36,6 +36,19 @@ function form_preentregas(){
 
 add_shortcode('wpshipit_preentregas', 'form_preentregas');
 
+function form_preentregas2(){
+        if ( is_user_logged_in() ) {
+        ob_start();     
+        include('views/templateformpreentregas2.php');    
+        $template = ob_get_contents();
+        ob_get_clean(); 
+        return $template;   
+        }   
+}
+
+
+add_shortcode('wpshipit_preentregas2', 'form_preentregas2');
+
 
 add_filter( 'wpcargo_package_fields', 'wpcargo_package_add_fields_callback' );
 function wpcargo_package_add_fields_callback( $package_fields){
@@ -331,4 +344,11 @@ function infoclientepedido(){
 }
 
 add_action( 'add_meta_boxes', 'wpt_add_event_metaboxes2' );
+
+/* Eliminar tipo de pieza */
+add_filter( 'wpcargo_package_fields', 'modify_package_fields' );
+function modify_package_fields( $package_fields){
+    unset( $package_fields['wpc-pm-piece-type'] );
+    return $package_fields;
+}
 ?>

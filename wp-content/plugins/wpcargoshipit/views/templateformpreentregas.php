@@ -24,7 +24,7 @@
 	</div>
 	<div class="rowform">		
 		<div class="file-select" id="src-file1" >
-			  <input type="file" name="factura" aria-label="Archivo" required>
+			  <input id="filefactura" type="file" name="factura" aria-label="Archivo" required>
 		</div>
 		<!--<input type="file" name="factura" placeholder="Factura o soporte" required>-->
 	</div>
@@ -72,7 +72,7 @@
 }
 
 #src-file1::before {
-  content: 'ADJUNTAR FACTURA PDF O JPG *';
+  content: 'ADJUNTAR FACTURA PDF PNG O JPG *';
 }
 
 	.rowform {
@@ -90,6 +90,14 @@
 
 	#formpreentregas {
 		margin-top: 20px;
+	}
+
+	#src-file1.archivocargado, #src-file1.archivocargado::before{
+		background: #4F3356;
+	}
+
+	#src-file1.archivocargado::before{
+		content: 'Factura: ' attr(archivocargado);
 	}
 </style>
 
@@ -156,5 +164,12 @@ $(document).on('click','.elementor-location-popup a', function(event){
 elementorProFrontend.modules.popup.closePopup( {}, event);
 });
 });
-	
+	/*
+	$('#filefactura').change(function() {	
+  	var file = $('#filefactura')[0].files[0].name;
+  	$("#src-file1").addClass("archivocargado");
+  	$("#src-file1").attr("archivocargado",file);  
+  
+});*/
+
 </script>

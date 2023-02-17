@@ -75,13 +75,19 @@ $cont = 1;
 						<img src='<?= wp_get_attachment_image_src($paquete["imagen_paquete"])[0]; ?>'>	
 					</div>
 					<div class="content">
-						<h5>Envío <?= $cont; ?></h5>
+						<h5>Paquete <?= $cont; ?></h5>
 						<p><?= $paquete["wpc-pm-description"]; ?></p>
 					</div>
 					<div class="accion">
 						<p class="subtitulo">Tracking <?= $cont; ?></p>
 						<p class="ptracking"><?= $paquete["tracking"]; ?></p>
-						<a href="<?= $paquete["factura"]; ?>" download>Descargar Factura</a>
+						<?php 
+						$factura = $paquete["factura"];
+						if (wp_get_attachment_url($factura)): 
+						$factura = wp_get_attachment_url($factura);						
+						 endif; ?>
+
+						<a class="ds" href="<?= $factura; ?>" download="<?= $factura; ?>">Descargar Factura</a>
 						<p class="not"> Revisa antes de consolidar: Haz click en nuestro chat si quieres corregir datos o necesitas ayuda <a href="#">LINK CHAT</a></p>
 					</div>
 					
@@ -313,3 +319,19 @@ $cont = 1;
 
 	}
 </style>
+
+<script type="text/javascript">
+	 
+    	$( ".ds" ).click(function(e) {   
+    	var href =$(this).attr("href");
+  			e.preventDefault();
+  			
+  			setTimeout(() => {
+			  console.log("Delayed for 1 second.");
+			  $(this).attr("href",href);
+			}, "1000")
+  			
+		});
+	
+	
+</script>

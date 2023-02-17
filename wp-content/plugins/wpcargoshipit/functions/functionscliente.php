@@ -468,4 +468,55 @@ function naleatorio($x){
 	return $value;
 }
 
+
+function registrar_preentrega2() {
+	
+	$factura       = $_FILES['factura'];
+	$fechaestimada = $_POST['datepicker'];
+	$tienda        = $_POST['tienda'];
+	$paquetes      = $_POST['paquetes'];
+	$result = -1;   
+	$dir = wp_upload_dir()["basedir"]."/preentregas/"; 
+
+	$img = $_FILES['factura']['name'];
+	$tmp = $_FILES['factura']['tmp_name'];	
+	
+	$final_image = rand(1000,1000000).$img;
+	$path = $dir.strtolower($final_image); 
+
+	if(!empty($factura) || !empty($fechaestimada))
+	{
+		if(move_uploaded_file($tmp,$path)) //Mover el archivo
+				{	
+
+						//Crear cada paquete
+						foreach ($paquetes as $key => $valor) {
+								$nombrepaquete = $valor["descripcion"];
+								$trackingid = $valor["tracking"];
+								$args = array('post_title'    => $nombrepaquete,  
+						  	'post_status'   => 'publish',
+						  	'post_type'=>'preentregas',
+						  	'post_author'   => get_current_user_id());
+								$result= wp_insert_post($args);
+								if ($result){								
+										add_post_meta($result, 'trackingid', $trackingid, true);
+								  	add_post_meta($result, 'factura',  wp_upload_dir()["baseurl"]."/preentregas/".strtolower($final_image), true);
+								  	add_post_meta($result, 'fechaestimada', $fechaestimada, true);
+								  	add_post_meta($result, 'tienda', $tienda, true);									  
+								} else {
+										$result = -2;
+								}
+						}
+			} else {
+				$result = -2;
+			}
+	}
+
+	echo json_encode(array("result"=>$result));
+	wp_die();
+}
+
+add_action( 'wp_ajax_nopriv_registrar_preentrega2', 'registrar_preentrega2' );
+add_action( 'wp_ajax_registrar_preentrega2', 'registrar_preentrega2' );
+
 ?>
