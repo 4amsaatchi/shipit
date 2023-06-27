@@ -1,10 +1,12 @@
 <h1 id="titpre">Notificaciones</h1>
-
 <div id="listadopreentregas">
 	
 <div class="rowth rowpreentregas">
 	<div class="colpreentrega">
 		<label>Nombre de usuario</label>
+	</div>
+	<div class="colpreentrega">
+		<label>Nombre paquete</label>
 	</div>
 	<!--<div class="colpreentrega">
 		<label>Id preentrega</label>
@@ -35,30 +37,45 @@ $wpb_all_query = new WP_Query(array('post_type'=>'preentregas', 'post_status'=>'
 <?php if ( $wpb_all_query->have_posts() ) : ?>
 	<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); 
 			$author_id = get_post_field ('post_author', get_the_ID());
-			$display_name = get_the_author_meta( 'display_name' , $author_id ); 
+			$display_name = get_the_author_meta( 'display_name' , $author_id ); /*." ".get_the_author_meta( 'last_name' , $author_id ); */
 			$email = get_the_author_meta( 'email' , $author_id ); 
 		?>
 
 	<div class="rowpreentregas">
 		<div class="colpreentrega">
+			<label class="onlymobiletxt">Nombre de usuario</label>
 			<?= $display_name; ?>
 		</div>
 		<!--<div class="colpreentrega">
 			<?php //get_the_ID(); ?>
 		</div>-->
 		<div class="colpreentrega">
+			<label class="onlymobiletxt">Nombre paquete</label>
+			<?= htmlspecialchars(get_the_title(get_the_ID())); ?>
+		</div>
+		<div class="colpreentrega">
+			<label class="onlymobiletxt">Fecha preevista</label>
 			<?= get_post_meta(get_the_ID(), 'fechaestimada', TRUE); ?>
 		</div>
 		<div class="colpreentrega">
-			<?= get_post_meta(get_the_ID(), 'trackingid', TRUE); ?>		
+			<label class="onlymobiletxt">Tracking</label>
+			<?= htmlspecialchars(get_post_meta(get_the_ID(), 'trackingid', TRUE)); ?>		
 		</div>
 		<div class="colpreentrega">
-			<?= get_post_meta(get_the_ID(), 'tienda', TRUE); ?>
+			<label class="onlymobiletxt">Tienda ingreso</label>
+			<?= htmlspecialchars(get_post_meta(get_the_ID(), 'tienda', TRUE)); ?>
+		</div>
+
+		<div class="colpreentrega">
+			<label class="onlymobiletxt">Carrier</label>
+			<?= htmlspecialchars(get_post_meta(get_the_ID(), 'carrier', TRUE)); ?>
 		</div>
 		<div class="colpreentrega">
+			<label class="onlymobiletxt">Email</label>
 			<a href="mailto:<?= $email; ?>" target="_blank"><?= $email; ?></a>		
 		</div>
 		<div class="colpreentrega">
+			<label class="onlymobiletxt">Factura</label>
 			<a href="<?= get_post_meta(get_the_ID(), 'factura', TRUE); ?>" target="_blank">Descargar </a>		
 		</div>
 		<div class="colpreentrega">
@@ -123,6 +140,33 @@ wp_reset_query();
 
 	#listadopreentregas {
 		border: 1px solid #f53c5e;
+	}
+
+	.onlymobiletxt {
+		display: none;
+	}
+	@media only screen and (max-width: 600px) {
+		.colpreentrega {
+			width: 100%;
+		}
+
+		div.rowpreentregas{
+			flex-direction: column;
+			width: 100%;
+		}
+		.onlymobiletxt {
+			display: block;
+			color: #f53c5e;
+			font-weight: bold;
+		}
+		.btncons {
+			margin: 0px auto;
+		}
+
+		.rowth{
+			display: none!important;
+		}
+
 	}
 </style>
 

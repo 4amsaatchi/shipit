@@ -1,4 +1,4 @@
-﻿=== Ultimate Member – User Profile, User Registration, Login & Membership Plugin ===
+﻿=== Ultimate Member – User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin ===
 Author URI: https://ultimatemember.com/
 Plugin URI: https://ultimatemember.com/
 Contributors: ultimatemember, champsupertramp, nsinelnikov
@@ -6,12 +6,12 @@ Donate link:
 Tags: community, member, membership, user-profile, user-registration
 Requires PHP: 5.6
 Requires at least: 5.0
-Tested up to: 6.0
-Stable tag: 2.5.1
+Tested up to: 6.2
+Stable tag: 2.6.0
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-The #1 plugin for front-end user profiles, user registration & login forms, member directories, content restriction and more.
+The #1 plugin for front-end user profiles, user registration & login forms, member directories, content restriction, user roles and more.
 
 == Description ==
 
@@ -162,6 +162,83 @@ No, you do not need to use our plugin’s login or registration pages and can us
 
 * To learn more about version 2.1 please see this [docs](https://docs.ultimatemember.com/article/1512-upgrade-2-1-0)
 * UM2.1+ is a significant update to the Member Directories' code base from 2.0.x. Please make sure you take a full-site backup with restore point before updating the plugin
+
+= 2.6.0: March 29, 2023 =
+
+* Enhancements:
+
+  - Added: Hook arguments ($form_id, $not_searched) to 'um_members_directory_head'
+  - Added: Using user locale `get_user_locale()` for localization with the 1st priority
+  - Added: Hooks to change the profile SEO image: 'um_profile_dynamic_meta_image_size', 'um_profile_dynamic_meta_image_type'
+  - Added: Filter for making 3rd-party roles editable through Ultimate Member interfaces. Use 'um_extend_editable_roles' and pass there an array of role keys( e.g. 'editor', 'administrator', etc. )
+
+* Bugfixes:
+
+  - Fixed: Major issues with the Member Directory search line
+  - Fixed: Social links (Twitch, TikTok, Reddit) colors in profile header
+  - Fixed: Exclude registered date field from editable fields
+  - Fixed: Create the custom table for usermeta if does not exists
+  - Fixed: Locale loading time and hook for that
+  - Fixed: Used `wp_unslash()` for input POST data on Change Password
+  - Fixed: Role setting "Avoid indexing profile by search engines"
+  - Fixed: Date Picker field value format for 3rd-party integration meta fields
+  - Fixed: Last login timestamp being lost in the users cache
+  - Fixed: Textdomain typos
+  - Fixed: Small PHP warnings and notices
+
+* Deprecated:
+
+  - Deprecated: VKontakte and Google+ predefined fields. VKontakte and Google+ fields validation changed to just URL validation.
+
+* Templates required update:
+  - members.php
+
+= 2.5.4: February 17, 2023 =
+
+* Enhancements:
+
+  - Added: TikTok, Twitch and Reddit fields
+  - Added: Handler of restriction settings for blog page
+  - Added: Support of the `<iframes>` inside textarea with enabled the "HTML using" option
+  - Added: 'um_get_field_date' hook for filtering date fields
+  - Added: `UM()->get_allowed_html()` function for using it inside wp_kses allowed HTML tags
+
+* Bugfixes:
+
+  - Fixed: Redirect to some links when content is restricted. Using `esc_url_raw()` instead of `esc_url()` for redirect to URLs inside class-access.php
+  - Fixed: Handle restriction settings for attachments, later hook is used for checking capabilities through `current_user_can()`
+  - Fixed: Honeypot triggering in password reset, when not set
+  - Fixed: Small PHP notices and warnings
+
+= 2.5.3: December 19, 2022 =
+
+* Bugfixes:
+
+  - Fixed: Plugin upgrade DB initialization and PHP Fatal Error.
+
+= 2.5.2: December 14, 2022 =
+
+* Enhancements:
+
+  - Added: Custom dropdown callback functions security enhancements. Avoid using blacklisted functions through namespace or uppercase format
+  - Added: Validation for upgrade package in wp-admin
+  - Added: `Change Password request limit` option for prevent from any brute-force attacks or password guessing with the form
+  - Added: Strong password checking for not using username|email inside the password
+  - Added: `um_custom_authenticate_error_codes` hook for handling 3rd-party login errors on UM invalid form
+
+* Bugfixes:
+
+  - Fixed: Some texts sanitizing
+  - Fixed: PHP Error in url-type field on UM Forms
+  - Fixed: Using `wp_mkdir` to avoid the filesystem conflict when copy email template to theme
+  - Fixed: Password Reset URL generating
+  - Fixed: Multiple users approve
+  - Fixed: Using regular URL-type field for displaying
+
+* Templates required update:
+  - members.php
+
+* Cached and optimized/minified assets(JS/CSS) must be flushed/re-generated after upgrade
 
 = 2.5.1: October 26, 2022 =
 

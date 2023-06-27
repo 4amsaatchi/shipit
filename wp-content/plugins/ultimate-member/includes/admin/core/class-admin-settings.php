@@ -106,6 +106,9 @@ if ( ! class_exists( 'um\admin\core\Admin_Settings' ) ) {
 
 				$metakeys = array();
 				foreach ( UM()->builtin()->all_user_fields as $all_user_field ) {
+					if ( ! array_key_exists( 'metakey', $all_user_field ) ) {
+						continue;
+					}
 					$metakeys[] = $all_user_field['metakey'];
 				}
 
@@ -220,6 +223,16 @@ if ( ! class_exists( 'um\admin\core\Admin_Settings' ) ) {
 				$values = array();
 				foreach ( $metadata as $metarow ) {
 					$values[] = $wpdb->prepare( '(%d, %s, %s)', $metarow['user_id'], $metarow['meta_key'], $metarow['meta_value'] );
+				}
+
+				// maybe create table.
+				$table_name = $wpdb->prefix . 'um_metadata';
+				$query      = $wpdb->prepare(
+					'SHOW TABLES LIKE %s',
+					$wpdb->esc_like( $table_name )
+				);
+				if ( $wpdb->get_var( $query ) !== $table_name ) {
+					UM()->setup()->create_db();
 				}
 
 				if ( ! empty( $values ) ) {
@@ -759,6 +772,9 @@ if ( ! class_exists( 'um\admin\core\Admin_Settings' ) ) {
 					'reset_password_limit_number'           => array(
 						'sanitize' => 'absint',
 					),
+					'change_password_request_limit'         => array(
+						'sanitize' => 'bool',
+					),
 					'blocked_emails'                        => array(
 						'sanitize' => 'textarea',
 					),
@@ -1284,6 +1300,12 @@ if ( ! class_exists( 'um\admin\core\Admin_Settings' ) ) {
 										'validate'    => 'numeric',
 										'conditional' => array( 'enable_reset_password_limit', '=', 1 ),
 										'size'        => 'small',
+									),
+									array(
+										'id'      => 'change_password_request_limit',
+										'type'    => 'checkbox',
+										'label'   => __( 'Change Password request limit', 'ultimate-member' ),
+										'tooltip' => __( 'This option adds rate limit when submitting the change password form in the Account page. Users are only allowed to submit 1 request per 30 minutes to prevent from any brute-force attacks or password guessing with the form.', 'ultimate-member' ),
 									),
 									array(
 										'id'      => 'blocked_emails',
@@ -3448,7 +3470,6 @@ Use Only Cookies:         			<?php echo ini_get( 'session.use_only_cookies' ) ? 
 		 * @return array
 		 */
 		function save_email_templates( $settings ) {
-
 			if ( empty( $settings['um_email_template'] ) ) {
 				return $settings;
 			}
@@ -3457,16 +3478,17 @@ Use Only Cookies:         			<?php echo ini_get( 'session.use_only_cookies' ) ? 
 			$content = wp_kses_post( stripslashes( $settings[ $template ] ) );
 
 			$theme_template_path = UM()->mail()->get_template_file( 'theme', $template );
-
 			if ( ! file_exists( $theme_template_path ) ) {
 				UM()->mail()->copy_email_template( $template );
 			}
 
-			$fp = fopen( $theme_template_path, "w" );
-			$result = fputs( $fp, $content );
-			fclose( $fp );
+			if ( file_exists( $theme_template_path ) ) {
+				$fp = fopen( $theme_template_path, "w" );
+				$result = fputs( $fp, $content );
+				fclose( $fp );
+			}
 
-			if ( $result !== false ) {
+			if ( isset( $result ) && $result !== false ) {
 				unset( $settings['um_email_template'] );
 				unset( $settings[ $template ] );
 			}

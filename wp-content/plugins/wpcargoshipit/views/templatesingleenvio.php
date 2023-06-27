@@ -29,6 +29,14 @@ $cont = 1;
 		<h1>Orden No. <?= $orden->post_name; ?></h1>
 		<p>Gracias por confiar <?= do_shortcode( '[nombreusuario]' ); ?></p>
 		<span>Tu envío se encuentra <?= $estadoactual; ?></span>
+		<span class="tipo"> <b>Tipo de envio:</b> 
+		<?php $category = get_the_terms( $orden->ID, 'wpcargo_shipment_cat' );  
+		
+		foreach ( $category as $cat){
+			   echo $cat->name;
+			}
+		?>
+		</span>
 		<?php if ( get_post_meta($norder, 'wpshipit_paymentstatus', true) != "") : ?>
 			<p> Estado de pago: <?= get_post_meta($norder, 'wpshipit_paymentstatus', true); ?> </p>
 		<?php endif; ?>
@@ -317,6 +325,10 @@ $cont = 1;
 			font-size: 14px;
 		}
 
+	}
+
+	.tipo {
+		color: #4F3356 !important;
 	}
 </style>
 

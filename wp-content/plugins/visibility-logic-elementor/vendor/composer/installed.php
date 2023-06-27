@@ -1,33 +1,32 @@
-<?php return array (
-  'root' => 
-  array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
-    'aliases' => 
-    array (
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '82d556682449484164c2488fc3550e393513c56f',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
     ),
-    'reference' => '8ce0d1c01527f9e09cd7e6e497de9ab6f26ab7c0',
-    'name' => '__root__',
-  ),
-  'versions' => 
-  array (
-    '__root__' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8ce0d1c01527f9e09cd7e6e497de9ab6f26ab7c0',
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '82d556682449484164c2488fc3550e393513c56f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'appsero/client' => array(
+            'pretty_version' => 'v1.2.3',
+            'version' => '1.2.3.0',
+            'reference' => 'ec07303199744eef17df30b1727b745226b6b113',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../appsero/client',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
     ),
-    'appsero/client' => 
-    array (
-      'pretty_version' => 'v1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5c3fdc4945c8680bca6fb01eee1ec5dc4f22de87',
-    ),
-  ),
 );

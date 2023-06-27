@@ -148,7 +148,7 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 				wp_send_json( $arr_options );
 			}
 
-			if ( in_array( $ajax_source_func, UM()->fields()->dropdown_options_source_blacklist(), true ) ) {
+			if ( UM()->fields()->is_source_blacklisted( $ajax_source_func ) ) {
 				$arr_options['status']  = 'error';
 				$arr_options['message'] = __( 'This is not possible for security reasons.', 'ultimate-member' );
 
@@ -493,13 +493,7 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 							}
 
 							global $wp_roles;
-							$role_keys     = array_map(
-								function( $item ) {
-									return 'um_' . $item;
-								},
-								get_option( 'um_roles', array() )
-							);
-							$exclude_roles = array_diff( array_keys( $wp_roles->roles ), array_merge( $role_keys, array( 'subscriber' ) ) );
+							$exclude_roles = array_diff( array_keys( $wp_roles->roles ), UM()->roles()->get_editable_user_roles() );
 
 							if ( ! empty( $role ) &&
 								( ! in_array( $role, $custom_field_roles, true ) || in_array( $role, $exclude_roles, true ) ) ) {
@@ -645,7 +639,24 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 											break;
 										case 'textarea':
 											if ( ! empty( $field['html'] ) || ( UM()->profile()->get_show_bio_key( $form ) === $k && UM()->options()->get( 'profile_show_html_bio' ) ) ) {
-												$form[ $k ] = wp_kses_post( $form[ $k ] );
+												$allowed_html = UM()->get_allowed_html( 'templates' );
+												if ( empty( $allowed_html['iframe'] ) ) {
+													$allowed_html['iframe'] = array(
+														'allow'           => true,
+														'frameborder'     => true,
+														'loading'         => true,
+														'name'            => true,
+														'referrerpolicy'  => true,
+														'sandbox'         => true,
+														'src'             => true,
+														'srcdoc'          => true,
+														'title'           => true,
+														'width'           => true,
+														'height'          => true,
+														'allowfullscreen' => true,
+													);
+												}
+												$form[ $k ] = wp_kses( $form[ $k ], $allowed_html );
 											} else {
 												$form[ $k ] = sanitize_textarea_field( $form[ $k ] );
 											}
@@ -653,7 +664,7 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 										case 'url':
 											$f = UM()->builtin()->get_a_field( $k );
 
-											if ( array_key_exists( 'match', $f ) && array_key_exists( 'advanced', $f ) && 'social' === $f['advanced'] ) {
+											if ( is_array( $f ) && array_key_exists( 'match', $f ) && array_key_exists( 'advanced', $f ) && 'social' === $f['advanced'] ) {
 												$v = sanitize_text_field( $form[ $k ] );
 
 												// Make a proper social link
@@ -823,13 +834,7 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 
 			// role field
 			global $wp_roles;
-			$role_keys     = array_map(
-				function( $item ) {
-					return 'um_' . $item;
-				},
-				get_option( 'um_roles', array() )
-			);
-			$exclude_roles = array_diff( array_keys( $wp_roles->roles ), array_merge( $role_keys, array( 'subscriber' ) ) );
+			$exclude_roles = array_diff( array_keys( $wp_roles->roles ), UM()->roles()->get_editable_user_roles() );
 
 			$roles = UM()->roles()->get_roles( false, $exclude_roles );
 			$roles = array_map(
@@ -841,7 +846,7 @@ if ( ! class_exists( 'um\core\Form' ) ) {
 
 			foreach ( $fields as $field_key => $field_settings ) {
 
-				if ( strstr( $field_key, 'role_' ) && is_array( $field_settings['options'] ) ) {
+				if ( strstr( $field_key, 'role_' ) && array_key_exists( 'options', $field_settings ) && is_array( $field_settings['options'] ) ) {
 
 					if ( isset( $this->post_form['mode'] ) && 'profile' === $this->post_form['mode'] &&
 						 isset( $field_settings['editable'] ) && $field_settings['editable'] == 0 ) {

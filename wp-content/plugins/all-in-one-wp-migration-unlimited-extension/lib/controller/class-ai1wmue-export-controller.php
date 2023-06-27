@@ -61,6 +61,32 @@ class Ai1wmue_Export_Controller {
 		);
 	}
 
+	public static function exclude_db_tables() {
+		global $wpdb;
+
+		if ( empty( $wpdb->use_mysqli ) ) {
+			$mysql = new Ai1wm_Database_Mysql( $wpdb );
+		} else {
+			$mysql = new Ai1wm_Database_Mysqli( $wpdb );
+		}
+
+		// Include table prefixes
+		if ( ai1wm_table_prefix() ) {
+			$mysql->add_table_prefix_filter( ai1wm_table_prefix() );
+
+			// Include table prefixes (Webba Booking)
+			foreach ( array( 'wbk_services', 'wbk_days_on_off', 'wbk_locked_time_slots', 'wbk_appointments', 'wbk_cancelled_appointments', 'wbk_email_templates', 'wbk_service_categories', 'wbk_gg_calendars', 'wbk_coupons' ) as $table_name ) {
+				$mysql->add_table_prefix_filter( $table_name );
+			}
+		}
+
+		Ai1wm_Template::render(
+			'export/exclude-db-tables',
+			array( 'tables' => $mysql->get_tables() ),
+			AI1WMUE_TEMPLATES_PATH
+		);
+	}
+
 	public static function list_files( $params = array() ) {
 		check_ajax_referer( 'ai1wmue_list', 'security' );
 		ai1wm_setup_environment();

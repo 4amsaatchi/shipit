@@ -241,11 +241,11 @@ add_action( 'wp_ajax_nopriv_registrar_preentrega', 'registrar_preentrega' );
 add_action( 'wp_ajax_registrar_preentrega', 'registrar_preentrega' );
 
 function asignarapedido() {
-	$result = 1;
-	
+	$result = 1;	
 	$idpaquete = $_POST['idpaquete'];	 
 	$iduser = $_POST['iduser'];
-	$orderid = buscarpedidenconsolidacion($iduser); 
+	$tipoenvio = get_post_meta($idpaquete, 'tipoenvio', true);
+	$orderid = buscarpedidenconsolidacion($iduser,$tipoenvio); 
 
 	if ($orderid == -1){
 		//Crear pedido de 0
@@ -270,6 +270,7 @@ function asignarapedido() {
 		$info = array('post_type'=>'wpcargo_shipment', 'post_title'=>$title, 'post_status' => 'publish');
 		$orderid = wp_insert_post($info);
 		if ($orderid != 0){
+		wp_set_post_terms($orderid, $tipoenvio,'wpcargo_shipment_cat');	
 		update_post_meta($orderid, 'wpcargo_status', get_estadoparaconsolidar());
 		update_post_meta($orderid, 'registered_shipper', $iduser);
 		add_post_meta($orderid, 'wpc-multiple-package', "");
@@ -311,7 +312,7 @@ add_action( 'wp_ajax_nopriv_asignarapedido', 'asignarapedido');
 
 
 /*  Retorna el id del primer pedido que se encentre pendiente de consolidación si no encuentra retorna -1*/
-function buscarpedidenconsolidacion($iduser){
+function buscarpedidenconsolidacion($iduser,$tipoenvio){
 GLOBAL $wpdb; 
 
 /*
@@ -361,7 +362,19 @@ $args = array(
       $idorder = -1;
     endif;*/
 
-$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = '".get_estadoparaconsolidar()."' ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
+/*$sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) INNER JOIN wp_term_relationships AS re ON ( wp_posts.ID = re.object_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = '".get_estadoparaconsolidar()."' ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) AND re.term_taxonomy_id=$tipoenvio LIMIT 1";
+
+$results = $wpdb->get_results($sql);
+
+if (count($results)> 0):
+  $idorder = $results[0]->ID;
+else: 
+  $idorder = -1;
+endif;
+
+    return $idorder;*/
+
+    $sql = "SELECT wp_posts.ID FROM wp_posts INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) WHERE 1=1 AND ( ( wp_postmeta.meta_key = 'registered_shipper' AND wp_postmeta.meta_value = $iduser ) AND ( ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = '".get_estadoparaconsolidar()."' ) OR ( mt1.meta_key = 'wpcargo_status' AND mt1.meta_value = 'SU ENVIO ESTA SIENDO CONSOLIDADO' ) ) ) AND wp_posts.post_type = 'wpcargo_shipment' AND ((wp_posts.post_status = 'publish')) LIMIT 1";
 
 $results = $wpdb->get_results($sql);
 
@@ -373,6 +386,7 @@ endif;
 
     return $idorder;
 
+
 }
 
 function agregarpaquete($orderid,$idpaquete) {
@@ -381,6 +395,7 @@ function agregarpaquete($orderid,$idpaquete) {
 	$factura       = get_post_meta($idpaquete, 'factura', true);
 	$fechaestimada = get_post_meta($idpaquete, 'fechaestimada', true);
 	$tienda        = get_post_meta($idpaquete, 'tienda', true);
+	$carrier        = get_post_meta($idpaquete, 'carrier', true);
 	$descripcion   = get_the_title($idpaquete);
 	/* */
 
@@ -389,7 +404,7 @@ function agregarpaquete($orderid,$idpaquete) {
 	if (empty( $paquetes)){
 		$paquetes = array();
 	}
-	array_push($paquetes, array("wpc-pm-description"=>$descripcion, 'store'=>$tienda, "tracking"=>$trackinid, "factura"=>$factura, "fechaestimada"=> $fechaestimada));
+	array_push($paquetes, array("wpc-pm-description"=>$descripcion, 'store'=>$tienda, "carrier"=>$carrier, "tracking"=>$trackinid, "factura"=>$factura, "fechaestimada"=> $fechaestimada));
 	update_post_meta($orderid, 'wpc-multiple-package', $paquetes);	
 }
 
@@ -473,6 +488,7 @@ function registrar_preentrega2() {
 	
 	$factura       = $_FILES['factura'];
 	$fechaestimada = $_POST['datepicker'];
+	//$tipoenvio 		 = $_POST['tipoenvio'];
 	$tienda        = $_POST['tienda'];
 	$paquetes      = $_POST['paquetes'];
 	$result = -1;   
@@ -493,6 +509,7 @@ function registrar_preentrega2() {
 						foreach ($paquetes as $key => $valor) {
 								$nombrepaquete = $valor["descripcion"];
 								$trackingid = $valor["tracking"];
+								$carrier = $valor["carrier"];								
 								$args = array('post_title'    => $nombrepaquete,  
 						  	'post_status'   => 'publish',
 						  	'post_type'=>'preentregas',
@@ -503,6 +520,8 @@ function registrar_preentrega2() {
 								  	add_post_meta($result, 'factura',  wp_upload_dir()["baseurl"]."/preentregas/".strtolower($final_image), true);
 								  	add_post_meta($result, 'fechaestimada', $fechaestimada, true);
 								  	add_post_meta($result, 'tienda', $tienda, true);									  
+								  	add_post_meta($result, 'carrier', $carrier, true);	
+								  	//add_post_meta($result, 'tipoenvio', $tipoenvio, true);
 								} else {
 										$result = -2;
 								}
@@ -518,5 +537,34 @@ function registrar_preentrega2() {
 
 add_action( 'wp_ajax_nopriv_registrar_preentrega2', 'registrar_preentrega2' );
 add_action( 'wp_ajax_registrar_preentrega2', 'registrar_preentrega2' );
+
+
+
+
+// Create Custom Settings form field
+function carrier_settings_field(){
+    ?>
+    <tr>
+        <th>Carriers</th>
+        <td><input type="text" name="carrier_setting" id="carrier_setting" placeholder="Ingrese las opciones separadas por coma" value="<?php echo get_option('carrier_setting'); ?>"></td>
+    </tr>
+    <?php
+}
+add_action( 'wpcargo_fields_option_settings_group', 'carrier_settings_field', 10, 1 );
+// Register settings option
+function carrier_register_setting_field_option(){
+    register_setting( 'wpcargo_option_settings_group', 'carrier_setting' );
+}
+add_action( 'admin_init', 'carrier_register_setting_field_option' );
+function cargarcarriers (){
+	$carriers = get_option("carrier_setting");
+	$carriers = explode(',', $carriers);
+	echo json_encode($carriers);
+	wp_die();
+}
+
+add_action( 'wp_ajax_nopriv_cargarcarriers', 'cargarcarriers' );
+add_action( 'wp_ajax_cargarcarriers', 'cargarcarriers' );
+
 
 ?>

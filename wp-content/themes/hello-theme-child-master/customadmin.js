@@ -1,4 +1,20 @@
+var datos = "";
 jQuery(document).ready( function($) {
+
+    
+    jQuery.ajax({
+            type: "post",
+            url: ajax_var.url,
+            data: "action=" + ajax_var.action + "&nonce=" + ajax_var.nonce,
+            success: function(result){                                
+                var data= jQuery.parseJSON(result);                
+                datos = data;       
+                loadcarriers();
+            }
+        });
+
+    
+
         jQuery("#menu-posts-wpcargo_shipment").removeClass("hidden");
             setTimeout(() => {
   loadimages();
@@ -185,10 +201,41 @@ function openselector(camposelected, elemento){
         jQuery('input[name="'+camposelected+'"]').click();
 }
 
+function Cargarcarrier(opciones, camposelected, value){
+    // Tiene valor
+    /*console.log("asd "+value);
+    console.log(value);*/
+    console.log(opciones);
+    if (value != "") {        
+         var html ="<select name='"+camposelected+"'><option disabled >Seleccione una opción</option>";
+        for (let i = 0; i < opciones.length; i++) {
+            console.log(" - valor 1 -"+opciones[i]+"- valor 2-"+value);
+            if (opciones[i].trimStart() == value.trimStart()){
+                html += "<option value='"+opciones[i].trimStart()+"' selected>"+opciones[i].trimStart()+"</option>";    
+            } else {
+                html += "<option value='"+opciones[i].trimStart()+"'>"+opciones[i].trimStart()+"</option>";    
+            }           
+            
+        }
+        html += "</select>";
+
+    } else {
+        //No tiene Valor
+        var html ="<select name='"+camposelected+"'><option disabled selected>Seleccione una opción</option>";
+        for (let i = 0; i < opciones.length; i++) {            
+            html += "<option value='"+opciones[i].trimStart()+"'>"+opciones[i].trimStart()+"</option>";
+        }
+        html += "</select>";
+    }
+
+    console.log(html);
+      
+        jQuery('input[name="'+camposelected+'"]').replaceWith(html);
+}
 function loadimages(){
-    console.log("ENTRO");
+    
 jQuery('input[name^=wpc-multiple-package]').each(function(index, el) {
-    console.log("NADA");
+    
     if (el.id == "imagen_paquete" && el.value != ""){
            Refresh_Image(el.name,el.value);
     }
@@ -196,11 +243,30 @@ jQuery('input[name^=wpc-multiple-package]').each(function(index, el) {
      if (el.id == "factura" && el.value != ""){
            Cargarfactura(el.name,el.value);
     }
+
+   
    
 });
 }
 
+function loadcarriers(){
+jQuery('input[name^=wpc-multiple-package]').each(function(index, el) {
+ if (el.id == "carrier"){        
+            Cargarcarrier(datos, el.name,el.value);
+    }
+});
+    }
+
 function eventoclick(){
+
+    jQuery('.wpc-multiple-package .wpc-mp-tr:nth-last-of-type(1) input[name^=wpc-multiple-package]').each(function(index, el) {
+    
+       if (el.id == "carrier"){        
+            Cargarcarrier(datos, el.name,el.value);
+    }
+   
+});
+    
     jQuery('.wpc-multiple-package input#imagen_paquete').click(function(e) {
               var camposelected = jQuery(this).attr("name");
              e.preventDefault();

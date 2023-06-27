@@ -1,0 +1,45 @@
+Easy WP SMTP debug log file
+
+[04/24/2023 3:38:44 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5824ESV
+[04/24/2023 3:38:53 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5824ESV
+[04/24/2023 3:49:42 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5824ESV
+[04/24/2023 4:51:08 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: carriaga@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH4509ESV
+[04/24/2023 4:53:10 PM] - Headers: , To: jfaguilar@digitalfactory.com.gt, Subject: [Shipit!] Restablecer la contraseña
+[04/24/2023 4:53:39 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[04/24/2023 4:58:38 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@digitalfactory.com.gt, Subject: Se ha agregado un nuevo paquete a tu envio SH1304ESV
+[04/24/2023 4:58:47 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@digitalfactory.com.gt, Subject: Se ha agregado un nuevo paquete a tu envio SH1304ESV
+[04/24/2023 4:59:17 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@digitalfactory.com.gt, Subject: Se ha agregado un nuevo paquete a tu envio SH1304ESV
+[04/25/2023 3:01:28 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5824ESV
+[05/03/2023 3:57:29 PM] - Headers: , To: jfaguilar@4amsaatchi.com, Subject: [Shipit!] Restablecer la contraseña
+[05/03/2023 3:57:46 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[05/05/2023 5:30:00 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Registro de nuevo usuario
+[05/05/2023 5:30:01 PM] - Headers: , To: jrueda@4amsaatchi.com, Subject: [Shipit!] Datos de acceso
+[05/05/2023 5:30:50 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[05/17/2023 2:35:43 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Cuenta Creada en Shipit
+[05/17/2023 2:37:24 PM] - Headers: , To: mtalavera@4amsaatchi.com, Subject: [Shipit!] Restablecer la contraseña
+[05/17/2023 2:37:24 PM] - Headers: , To: mtalavera@4amsaatchi.com, Subject: [Shipit!] Restablecer la contraseña
+[05/17/2023 2:38:42 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[05/17/2023 2:45:40 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH3982ESV
+[05/17/2023 2:46:55 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH3982ESV
+[05/17/2023 2:46:57 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH3982ESV
+[05/17/2023 2:47:10 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Se ha agregado un nuevo paquete a tu envio SH3982ESV
+[05/17/2023 2:51:38 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[05/17/2023 2:51:39 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: mtalavera@4amsaatchi.com, Subject: Su envio  ha sido consolidado 
+[05/17/2023 2:55:39 PM] - Headers: Content-Type: text/html; charset=UTF-8 | De: Shipit! <jescobar@4amsaatchi.com>, To: insights@4ampeoplefirst.com, Subject: Asignar notificación de envío [Employee]
+[05/17/2023 2:55:40 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: mtalavera@4amsaatchi.com, Subject: Shipit Tracking # SH3982ESV - En Transito a ES
+[05/17/2023 2:55:41 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Notificación cambio de estado pedido # SH3982ESV
+[05/17/2023 3:01:12 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: mtalavera@4amsaatchi.com, Subject: Shipit Tracking # SH3982ESV - En Aduanas
+[05/17/2023 3:01:14 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Notificación cambio de estado pedido # SH3982ESV
+[05/17/2023 3:01:38 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: mtalavera@4amsaatchi.com, Subject: Shipit Tracking # SH3982ESV - En reparto
+[05/17/2023 3:01:40 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Notificación cambio de estado pedido # SH3982ESV
+[05/17/2023 3:01:51 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com> | cc: jescobar@4amsaatchi.com
+, To: mtalavera@4amsaatchi.com, Subject: Shipit Tracking # SH3982ESV - Entregado
+[05/17/2023 3:01:52 PM] - Headers: Content-Type: text/html; charset=UTF-8 | From: Shipit! <jescobar@4amsaatchi.com>, To: jescobar@4amsaatchi.com, Subject: Notificación cambio de estado pedido # SH3982ESV
+[05/30/2023 10:19:15 PM] - Headers: , To: admin@aguitta.com, Subject: [Shipit!] Restablecer la contraseña
+[05/30/2023 10:20:09 PM] - Headers: , To: jescobar@4amsaatchi.com, Subject: [Shipit!] Contraseña cambiada
+[05/30/2023 11:58:49 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: julian515419@gmail.com, Subject: Se ha agregado un nuevo paquete a tu envio SH5824ESV
+[06/07/2023 9:38:50 PM] - Headers: Content-Type: text/html; charset=UTF-8 | Bcc: <jescobar@4amsaatchi.com>, To: julian51541@hotmail.com, Subject: Se ha consolidado el envío 
+[06/07/2023 9:38:51 PM] - Headers: Content-Type: text/html; charset=UTF-8, To: jfaguilar@4amsaatchi.com, Subject: Su envio  ha sido consolidado 

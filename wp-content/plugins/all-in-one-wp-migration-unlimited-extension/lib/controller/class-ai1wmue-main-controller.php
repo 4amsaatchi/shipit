@@ -179,6 +179,9 @@ class Ai1wmue_Main_Controller {
 			// Add export exclude files
 			add_action( 'ai1wm_export_advanced_settings', 'Ai1wmue_Export_Controller::exclude_files' );
 
+			// Add export exclude db tables
+			add_action( 'ai1wm_export_exclude_db_tables', 'Ai1wmue_Export_Controller::exclude_db_tables' );
+
 			// Settings
 			add_action( 'admin_post_ai1wmue_settings', 'Ai1wmue_Settings_Controller::settings' );
 
@@ -274,7 +277,6 @@ class Ai1wmue_Main_Controller {
 				),
 				'filters'     => array(
 					'ai1wm_archive_extension' => array( 'wpress' ),
-					'ai1wm_archive_size'      => apply_filters( 'ai1wm_max_file_size', AI1WM_MAX_FILE_SIZE ),
 				),
 			)
 		);
@@ -331,6 +333,12 @@ class Ai1wmue_Main_Controller {
 			array( 'jquery' )
 		);
 
+		wp_enqueue_script(
+			'ai1wmue_db_table_exclude',
+			Ai1wm_Template::asset_link( 'javascript/db-tables-excluder.min.js', 'AI1WMUE' ),
+			array( 'jquery' )
+		);
+
 		wp_localize_script(
 			'ai1wmue_file_exclude',
 			'ai1wmue_locale',
@@ -353,6 +361,11 @@ class Ai1wmue_Main_Controller {
 				'error_message'                      => __( 'Something went wrong, please refresh and try again', AI1WMUE_PLUGIN_NAME ),
 				'button_clear'                       => __( 'Clear selection', AI1WMUE_PLUGIN_NAME ),
 				'empty_list_message'                 => __( 'Folder empty. Click on folder icon to close it.', AI1WMUE_PLUGIN_NAME ),
+				'column_table_name'                  => __( 'Table Name', AI1WMUE_PLUGIN_NAME ),
+				'selected_no_tables'                 => __( 'No tables selected', AI1WMUE_PLUGIN_NAME ),
+				'selected_one_table'                 => __( '{x} table selected', AI1WMUE_PLUGIN_NAME ),
+				'selected_multiple_tables'           => __( '{x} tables selected', AI1WMUE_PLUGIN_NAME ),
+				'database_name'                      => DB_NAME,
 			)
 		);
 
@@ -467,15 +480,6 @@ class Ai1wmue_Main_Controller {
 		}
 
 		return $links;
-	}
-
-	/**
-	 * Max file size callback
-	 *
-	 * @return integer
-	 */
-	public function max_file_size() {
-		return AI1WMUE_MAX_FILE_SIZE;
 	}
 
 	/**

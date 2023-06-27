@@ -87,7 +87,12 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			foreach ( $social as $k => $arr ) {
 				if ( um_profile( $k ) ) {
-					$match = is_array( $arr['match'] ) ? $arr['match'][0] : $arr['match']; ?>
+					if ( array_key_exists( 'match' , $arr ) ) {
+						$match = is_array( $arr['match'] ) ? $arr['match'][0] : $arr['match'];
+					} else {
+						$match = null;
+					}
+					?>
 
 					<a href="<?php echo esc_url( um_filtered_social_link( $k, $match ) ); ?>"
 					   style="background: <?php echo esc_attr( $arr['color'] ); ?>;" target="_blank" class="um-tip-n"
@@ -112,7 +117,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 			$output = null;
 
 			foreach ( $fields as $key => $data ) {
-				$output .= UM()->fields()->edit_field( $key, $data );
+				$output .= $this->edit_field( $key, $data );
 			}
 
 			echo $output;
@@ -147,7 +152,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			if ( array_key_exists( 'custom_dropdown_options_source', $args ) ) {
 				if ( function_exists( wp_unslash( $args['custom_dropdown_options_source'] ) ) ) {
-					if ( ! in_array( $args['custom_dropdown_options_source'], UM()->fields()->dropdown_options_source_blacklist(), true ) ) {
+					if ( ! $this->is_source_blacklisted( $args['custom_dropdown_options_source'] ) ) {
 						$allowed_callbacks = UM()->options()->get( 'allowed_choice_callbacks' );
 						if ( ! empty( $allowed_callbacks ) ) {
 							$allowed_callbacks = array_map( 'rtrim', explode( "\n", $allowed_callbacks ) );
@@ -204,7 +209,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			if ( array_key_exists( 'custom_dropdown_options_source', $args ) ) {
 				if ( function_exists( wp_unslash( $args['custom_dropdown_options_source'] ) ) ) {
-					if ( ! in_array( $args['custom_dropdown_options_source'], UM()->fields()->dropdown_options_source_blacklist(), true ) ) {
+					if ( ! $this->is_source_blacklisted( $args['custom_dropdown_options_source'] ) ) {
 						$allowed_callbacks = UM()->options()->get( 'allowed_choice_callbacks' );
 						if ( ! empty( $allowed_callbacks ) ) {
 							$allowed_callbacks = array_map( 'rtrim', explode( "\n", $allowed_callbacks ) );
@@ -243,7 +248,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 			$fields = UM()->query()->get_attr( 'custom_fields', $form_id );
 
 			if ( isset( $fields[ $id ] ) ) {
-				$condition_fields = get_option( 'um_fields' );
+				$condition_fields = get_option( 'um_fields', array() );
 
 				if( ! is_array( $condition_fields ) ) $condition_fields = array();
 
@@ -1310,6 +1315,25 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 		}
 
 		/**
+		 * Is the dropdown source callback function blacklisted?
+		 *
+		 * @param string $source Function name
+		 *
+		 * @return bool
+		 */
+		public function is_source_blacklisted( $source ) {
+			// avoid using different letter case for bypass the blacklist e.g. phpInfo
+			// avoid using root namespace for bypass the blacklist e.g. \phpinfo
+			$source = trim( strtolower( $source ), '\\' );
+
+			if ( in_array( $source, $this->dropdown_options_source_blacklist(), true ) ) {
+				return true;
+			}
+
+			return false;
+		}
+
+		/**
 		 * Gets selected option value from a callback function
 		 *
 		 * @param  string $value
@@ -1322,7 +1346,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			if ( in_array( $type, array( 'select', 'multiselect' ) ) && ! empty( $data['custom_dropdown_options_source'] ) ) {
 
-				if ( in_array( $data['custom_dropdown_options_source'], $this->dropdown_options_source_blacklist(), true ) ) {
+				if ( $this->is_source_blacklisted( $data['custom_dropdown_options_source'] ) ) {
 					return $value;
 				}
 
@@ -1393,7 +1417,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			if ( in_array( $type, array( 'select', 'multiselect' ) ) && ! empty( $data['custom_dropdown_options_source'] ) ) {
 
-				if ( in_array( $data['custom_dropdown_options_source'], $this->dropdown_options_source_blacklist(), true ) ) {
+				if ( $this->is_source_blacklisted( $data['custom_dropdown_options_source'] ) ) {
 					return $arr_options;
 				}
 
@@ -1712,6 +1736,28 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 					}
 
+					/**
+					 * UM hook
+					 *
+					 * @type filter
+					 * @title um_get_field_date
+					 * @description Extend field date
+					 * @input_vars
+					 * [{"var":"$data","type":"array","desc":"Field Date Data"}]
+					 * @change_log
+					 * ["Since: 2.5.4"]
+					 * @usage add_filter( 'um_get_field_date', 'function_name', 10, 1 );
+					 * @example
+					 * <?php
+					 * add_filter( 'um_get_field_date', 'my_get_field_date', 10, 1 );
+					 * function my_get_field_date( $data ) {
+					 *     // your code here
+					 *     return $data;
+					 * }
+					 * ?>
+					 */
+					$array = apply_filters( 'um_get_field_date', $array );
+
 					break;
 
 				case 'time':
@@ -2009,7 +2055,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 		 */
 		function get_restricted_fields_for_edit( $_um_profile_id = false ) {
 			// fields that need to be disabled in edit mode (profile)
-			$arr_restricted_fields = array( 'user_email', 'username', 'user_login', 'user_password', '_um_last_login' );
+			$arr_restricted_fields = array( 'user_email', 'username', 'user_login', 'user_password', '_um_last_login', 'user_registered' );
 			$arr_restricted_fields = apply_filters( 'um_user_profile_restricted_edit_fields', $arr_restricted_fields, $_um_profile_id );
 
 			return $arr_restricted_fields;
@@ -2639,7 +2685,20 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 					}
 
-					$output .= '<input  ' . $disabled . '  class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $key . UM()->form()->form_suffix ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . $this->field_value( $key, $default, $data ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" data-range="' . esc_attr( $range ) . '" data-years="' . esc_attr( $years ) . '" data-years_x="' . esc_attr( $years_x ) . '" data-disabled_weekdays="' . esc_attr( $disabled_weekdays ) . '" data-date_min="' . esc_attr( $date_min ) . '" data-date_max="' . esc_attr( $date_max ) . '" data-format="' . esc_attr( $js_format ) . '" data-value="' . $this->field_value( $key, $default, $data ) . '" />
+					// Normalise date format.
+					$value = $this->field_value( $key, $default, $data );
+					if ( $value ) {
+						// numeric (either unix or YYYYMMDD). ACF uses Ymd format of date inside the meta tables.
+						if ( is_numeric( $value ) && strlen( $value ) !== 8 ) {
+							$unixtimestamp = $value;
+						} else {
+							$unixtimestamp = strtotime( $value );
+						}
+						// Ultimate Member date field stores the date in metatable in the format Y/m/d. Convert to it before echo.
+						$value = date( 'Y/m/d', $unixtimestamp );
+					}
+
+					$output .= '<input  ' . $disabled . '  class="' . $this->get_class( $key, $data ) . '" type="' . esc_attr( $input ) . '" name="' . esc_attr( $key . UM()->form()->form_suffix ) . '" id="' . esc_attr( $key . UM()->form()->form_suffix ) . '" value="' . esc_attr( $value ) . '" placeholder="' . esc_attr( $placeholder ) . '" data-validate="' . esc_attr( $validate ) . '" data-key="' . esc_attr( $key ) . '" data-range="' . esc_attr( $range ) . '" data-years="' . esc_attr( $years ) . '" data-years_x="' . esc_attr( $years_x ) . '" data-disabled_weekdays="' . esc_attr( $disabled_weekdays ) . '" data-date_min="' . esc_attr( $date_min ) . '" data-date_max="' . esc_attr( $date_max ) . '" data-format="' . esc_attr( $js_format ) . '" data-value="' . esc_attr( $value ) . '" />
 
 						</div>';
 
@@ -3062,7 +3121,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 						if ( ! empty( $data['custom_dropdown_options_source'] ) && $has_parent_option && function_exists( $data['custom_dropdown_options_source'] ) &&
 							um_user( $data['parent_dropdown_relationship'] )
 						) {
-							if ( ! in_array( $data['custom_dropdown_options_source'], $this->dropdown_options_source_blacklist(), true ) ) {
+							if ( ! $this->is_source_blacklisted( $data['custom_dropdown_options_source'] ) ) {
 								$options = call_user_func( $data['custom_dropdown_options_source'], $data['parent_dropdown_relationship'] );
 							}
 
@@ -3082,7 +3141,7 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 					if ( $has_parent_option ) {
 						if ( ! empty( $data['custom_dropdown_options_source'] ) && $has_parent_option &&
 							 function_exists( $data['custom_dropdown_options_source'] ) && isset( UM()->form()->post_form[ $form_key ] ) ) {
-							if ( ! in_array( $data['custom_dropdown_options_source'], $this->dropdown_options_source_blacklist(), true ) ) {
+							if ( ! $this->is_source_blacklisted( $data['custom_dropdown_options_source'] ) ) {
 								$options = call_user_func( $data['custom_dropdown_options_source'], $data['parent_dropdown_relationship'] );
 							}
 						}
@@ -3900,12 +3959,9 @@ if ( ! class_exists( 'um\core\Fields' ) ) {
 
 			// role field
 			global $wp_roles;
-			$role_keys = array_map( function( $item ) {
-				return 'um_' . $item;
-			}, get_option( 'um_roles', array() ) );
-			$exclude_roles = array_diff( array_keys( $wp_roles->roles ), array_merge( $role_keys, array( 'subscriber' ) ) );
 
-			$roles = UM()->roles()->get_roles( false, $exclude_roles );
+			$exclude_roles = array_diff( array_keys( $wp_roles->roles ), UM()->roles()->get_editable_user_roles() );
+			$roles         = UM()->roles()->get_roles( false, $exclude_roles );
 
 			if ( ! empty( $options ) ) {
 

@@ -19,7 +19,7 @@ class Simple_Address_Autocomplete
 		if (defined('SIMPLE_ADDRESS_AUTOCOMPLETE_VERSION')) {
 			$this->version = SIMPLE_ADDRESS_AUTOCOMPLETE_VERSION;
 		} else {
-			$this->version = '1.1.1';
+			$this->version = '1.2.0';
 		}
 		$this->plugin_name = 'simple-address-autocomplete';
 
@@ -75,7 +75,7 @@ class Simple_Address_Autocomplete
 						echo '';
 						break;
 					case 'general_settings_second_section':
-						echo 'Got questions? The <a target="_blank" href="https://saa.khadim.nz/">Knowledge Base</a> explains each of the settings above and answers all the frequently asked questions. <a target="_blank" href="https://saa.khadim.nz/"> Get help</a>';
+						echo 'Got questions? The <a target="_blank" href="https://saa.khadim.nz/">Knowledge Base</a> explains each of the settings above and answers all the frequently asked questions. <a target="_blank" href="https://wordpress.org/support/plugin/simple-address-autocomplete/"> Get help</a>';
 						break;
 				}
 			}
@@ -354,8 +354,33 @@ class Simple_Address_Autocomplete
 							"ZM" => "Zambia",
 							"ZW" => "Zimbabwe",
 						),
-						'default' => array()
-					)
+						'default' => array(),
+					),
+					array(
+						'uid' => 'simple_aa_options_bias_coordinates',
+						'label' => 'Biased Search Coordinates',
+						'placeholder' => '-37.7878809, 175.281788',
+						'section' => 'general_settings',
+						'type' => 'text',
+						'helper' => ' ',
+						'supplimental' => 'Enter the area coordinates here. See <i><a target="_blank" href="https://saa.khadim.nz/kb/how-to-get-coordinates"> How to get area coordinates? </a></i> if you need help finding coordinates.',
+						'default' => '',
+					),
+
+					array(
+						'uid' => 'simple_aa_options_restriction_type',
+						'label' => 'Restriction Type',
+						'placeholder' => ' ',
+						'section' => 'general_settings',
+						'type' => 'select',
+						'helper' => ' ',
+						'supplimental' => 'Restricted will limit the search to selected coordinates and will override country selction. Read more about <i><a target="_blank" href="https://saa.khadim.nz/kb/how-to-get-coordinates"> Restriction Type </a></i> here.',
+						'options' => array(
+							'biased' => 'Biased',
+							'restricted' => 'Restricted',
+						),
+						'default' => 'biased',
+					),
 				);
 				foreach ($fields as $field) {
 

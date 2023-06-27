@@ -78,6 +78,12 @@ function wpcargo_package_add_fields_callback( $package_fields){
     'required' => false,
     'options' => array()
   );
+ $package_fields['carrier'] = array(
+    'label' => __('Carrier', 'wpcargo'),
+    'field' => 'text',
+    'required' => false,
+    'options' => array()
+  );
     $package_fields['fechaestimada'] = array(
     'label' => __('Fecha estimada', 'wpcargo'),
     'field' => 'text',
@@ -103,7 +109,12 @@ function botonconsolidareemail($idenvio){
 
 // I'm using an anonymous function for brevity.
 add_action( 'admin_enqueue_scripts', function() {
-    wp_enqueue_script( 'handle', get_stylesheet_directory_uri(). '/customadmin.js?v=baa44159s43' );
+    wp_enqueue_script( 'handle', get_stylesheet_directory_uri(). '/customadmin.js?v=b2' );
+     wp_localize_script( 'handle', 'ajax_var', array(
+        'url'    => admin_url( 'admin-ajax.php' ),
+        'nonce'  => wp_create_nonce( 'my-ajax-nonce' ),
+        'action' => 'cargarcarriers'
+    ) );
 } );
 
 // Ajax action to refresh the user image
